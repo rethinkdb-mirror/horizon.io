@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Build a realtime social bookmark manager with Vue.js and Horizon</title>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/github.css">
+
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="shortcut icon" href="/favicon/favicon.ico">
+
+        <!-- fonts.com -->
+        <script type="text/javascript">
+            // first, create the object that contains
+            // configuration variables
+            MTIConfig = {};
+
+            // next, add a variable that will control
+            // whether or not FOUT will be prevented
+            MTIConfig.EnableCustomFOUTHandler = false // true = prevent FOUT
+        </script>
+        <script type="text/javascript" src="//fast.fonts.net/jsapi/5cf5064a-b80d-4123-82d3-5c7a863edb22.js"></script>
+        <!-- jquery -->
+        <script type="text/javascript" src="/js/jquery/jquery-2.2.3.min.js"></script>
+        <!-- waypoints -->
+        <script type="text/javascript" src="/js/waypoints/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="/js/waypoints/sticky.min.js"></script>
+        <!-- horizon.io -->
+        <script type="text/javascript" src="/js/site.js"></script>
+    </head>
+    <body>
+        
+
+        <nav class="site-nav">
+            <div class="site-container">
+                <a class="logo" href="/"><img src="/images/horizon-logo.png" alt="Horizon"></a>
+                <ul class="navbar-links">
+                    <li class="menu-trigger">
+                        <svg height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="miu" stroke="none" stroke-width="1"><g id="Artboard-1" transform="translate(-395.000000, -479.000000)"><g id="slice" transform="translate(215.000000, 119.000000)"/><path d="M396.500836,485 C396.224232,485 396,485.214035 396,485.504684 L396,486.495316 C396,486.774045 396.217742,487 396.500836,487 L417.499164,487 C417.775768,487 418,486.785965 418,486.495316 L418,485.504684 C418,485.225955 417.782258,485 417.499164,485 L396.500836,485 Z M396.500836,490 C396.224232,490 396,490.214035 396,490.504684 L396,491.495316 C396,491.774045 396.217742,492 396.500836,492 L417.499164,492 C417.775768,492 418,491.785965 418,491.495316 L418,490.504684 C418,490.225955 417.782258,490 417.499164,490 L396.500836,490 Z M396.500836,495 C396.224232,495 396,495.214035 396,495.504684 L396,496.495316 C396,496.774045 396.217742,497 396.500836,497 L417.499164,497 C417.775768,497 418,496.785965 418,496.495316 L418,495.504684 C418,495.225955 417.782258,495 417.499164,495 L396.500836,495 Z" id="editor-list-view-hambuger-menu-glyph"/></g></g></svg>
+
+                    </li>
+                    <li>
+                        <a href="/cloud">Horizon Cloud</a>
+                    </li>
+                    <li>
+                        <a href="/install">Install</a>
+                    </li>
+                    <li>
+                        <a href="/faq">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="/docs">Docs</a>
+                    </li>
+                    <li>
+                        <a href="/community">Community</a>
+                    </li>
+                    <li class="active">
+                        <a href="/blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="site-content">
+            
+
+<section class="blog document">
+    <div class="site-container">
+        <section class="post-container">
+            <article class="post">
+                <div class="post-hero above">
+                    
+                </div>
+                <h1 class="title"><a href="/blog/permission-tutorial/">Build a realtime social bookmark manager with Vue.js and Horizon</a></h1>
+                <div class="post-byline">
+                    <a class="avatar" href="https://twitter.com/horizonjs">
+                        <img src="/images/blog/authors/horizon.png">
+                        <!--default-->
+                        
+                            Ryan Paul
+                        
+                    </a>
+                    <span class="post-timestamp">July 26, 2016</span>
+                    <ul class="post-tags">
+                        
+                    </ul>
+                </div>
+                <div class="post-body">
+                    <p><img src="/images/posts/2016-07-22/bookmark.png" style="width: 450px; float: right; display: inline-block;" /></p>
+
+<p><em>September 14: This post has been updated to use the Horizon 2.0 API.</em></p>
+
+<p>In this tutorial, I’ll demonstrate how to build a social bookmark manager with 
+Horizon and the <a href="https://vuejs.org/">Vue.js</a> frontend framework. You can build the entire 
+application without writing a single line of backend code. This tutorial also 
+covers some of the best practices for developing with Horizon.</p>
+
+<!--more-->
+
+<h1 id="first-steps">First steps</h1>
+
+<p>If you’re completely new to Horizon, you might want to peruse the 
+<a href="/docs/getting-started/">Getting Started</a> guide before you dive into into building your first 
+application. If you would like to follow along, you can <a href="/install/">install Horizon</a> from
+ the npm repository.</p>
+
+<p>After you install Horizon, you can run <code class="highlighter-rouge">hz init thinkmark</code> to create a new 
+Horizon project called <em>thinkmark</em>. In the new <code class="highlighter-rouge">thinkmark</code> directory, you can 
+find the standard Horizon configuration in <code class="highlighter-rouge">.hz/config.toml</code>. You can adjust the
+ settings in the <code class="highlighter-rouge">toml</code> file. You can type <code class="highlighter-rouge">hz serve</code> to run the application 
+from the command line.</p>
+
+<p>When I start a new project, I typically run <code class="highlighter-rouge">hz serve</code> with the <code class="highlighter-rouge">--dev</code> 
+parameter to turn on development mode. When Horizon runs in development mode, 
+the permission system is disabled and the server automatically creates new 
+database collections and indexes as needed. Development mode is obviously not 
+safe for a production application, but it’s ideal for rapid prototyping. As you 
+will see later in this tutorial, I typically use Horizon with the <code class="highlighter-rouge">--dev</code> option
+ until I’m ready to start implementing and testing permissions.</p>
+
+<h1 id="authentication">Authentication</h1>
+
+<p><img src="/images/posts/2016-07-22/auth-flow.png" /></p>
+
+<p>Authentication and identity management are important parts of any multiuser web 
+application, but the underlying plumbing is often tedious to implement. 
+Horizon’s built-in authentication and permission systems make it easier for 
+frontend developers to build realtime web applications that incorporate user 
+accounts and rule-based security without writing any backend code.</p>
+
+<p>Horizon supports authenticating users via third-party OAuth providers. The 
+Horizon server and frontend client library handle most of the authentication 
+process, insulating developers from OAuth’s complexity and general 
+unpleasantness.</p>
+
+<h2 id="initial-setup">Initial Setup</h2>
+
+<p>To use a third-party OAuth provider in your Horizon application, you have to 
+obtain a key from the desired OAuth service and add it to your application’s 
+<code class="highlighter-rouge">.hz/config.toml</code> file. I used GitHub as the authentication provider in my demo 
+application. On the GitHub website, you can register a new application by 
+visiting the <a href="/settings/applications">OAuth applications</a> pane in account settings.</p>
+
+<p>In the <em>Authorization callback URL</em> field, put the public internet address of 
+your Horizon application. When a user completes the authentication process, 
+GitHub redirects the user back to your application with the address you provide 
+in the callback field. Be sure that the address points to the top-level root of 
+your Horizon application, not an arbitrary path.</p>
+
+<p><img src="/images/posts/2016-07-22/ghoauth.png" /></p>
+
+<p>When you finish registering your OAuth application, GitHub will give you a 
+client ID and a client secret. Horizon needs both of those values in order use 
+GitHub as an authentication provider. Out of the box, the <code class="highlighter-rouge">config.toml</code> file 
+generated by the <code class="highlighter-rouge">hz init</code> command includes sample configurations for several 
+OAuth providers. All you have to do is uncomment the one that you want to use, 
+and then paste in the ID and secret key:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="py">token_secret</span> <span class="p">=</span> <span class="s">"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"</span>
+<span class="py">allow_anonymous</span> <span class="p">=</span> <span class="kc">false</span>
+<span class="py">allow_unauthenticated</span> <span class="p">=</span> <span class="kc">true</span>
+
+<span class="nn">[auth.github]</span>
+<span class="py">id</span> <span class="p">=</span> <span class="s">"xxxxxxxxxxxxxxxxxxxx"</span>
+<span class="py">secret</span> <span class="p">=</span> <span class="s">"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"</span>
+</code></pre>
+</div>
+
+<p>Keep in mind that using a third-party OAuth provider generally requires you to 
+serve your application to the public internet and set up SSL certificates. If 
+you are developing your application on your own computer within a firewall, you 
+could try using a tool like <a href="https://ngrok.com/">ngrok</a> to expose Horizon to the broader internet.</p>
+
+<p>To learn more about OAuth configuration and the OAuth providers supported in 
+Horizon, you can visit the <a href="/docs/auth/">Horizon documentation</a>.</p>
+
+<h2 id="identify-authenticated-users">Identify authenticated users</h2>
+
+<p>Under the hood, Horizon uses <a href="https://jwt.io/">JSON Web Tokens</a> (JWT) to identify 
+authenticated users. The Horizon client library relies on browser 
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">local storage</a> to save the tokens across sessions. When the client connects 
+to the server to perform a query, it automatically passes along the token from 
+local storage to identify the user.</p>
+
+<p><img src="/images/posts/2016-07-22/authentication.png" /></p>
+
+<p>When your application starts, you can invoke the <code class="highlighter-rouge">hasAuthToken</code> method on a 
+Horizon client instance to determine if the user has an existing authentication 
+token in local storage. If a token is available, you can perform a <code class="highlighter-rouge">currentUser</code>
+ query to fetch the user’s account information:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">horizon</span> <span class="o">=</span> <span class="nx">Horizon</span><span class="p">();</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">horizon</span><span class="p">.</span><span class="nx">hasAuthToken</span><span class="p">())</span>
+  <span class="nx">horizon</span><span class="p">.</span><span class="nx">currentUser</span><span class="p">().</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">user</span> <span class="o">=&gt;</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">The</span> <span class="nx">user</span><span class="err">'</span><span class="nx">s</span> <span class="nx">ID</span> <span class="nx">is</span><span class="err">:</span> <span class="nx">$</span><span class="p">{</span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="err">`</span><span class="p">));</span>
+</code></pre>
+</div>
+
+<p>In the internal database for your Horizon application, all of your application’s
+ users are represented by corresponding documents in the <code class="highlighter-rouge">users</code> table. The 
+<code class="highlighter-rouge">currentUser</code> method returns the document associated with the active user.</p>
+
+<h2 id="authentication-flow">Authentication flow</h2>
+
+<p>When a user wants to log in, redirect them to the Horizon server endpoint that 
+initiates the authentication process for the given OAuth provider. You can get 
+the path by calling the <code class="highlighter-rouge">authEndpoint</code> method and specifying the desired 
+provider. You can pass the return value to <code class="highlighter-rouge">window.location.replace(endpoint)</code> 
+to perform the redirect:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">horizon</span> <span class="o">=</span> <span class="nx">Horizon</span><span class="p">();</span>
+
+<span class="nx">horizon</span><span class="p">.</span><span class="nx">authEndpoint</span><span class="p">(</span><span class="s2">"github"</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">endpoint</span> <span class="o">=&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>Horizon sends the user to the GitHub website, which displays a prompt that that 
+asks for permission to complete the login. When the user grants permission, 
+GitHub redirects the user back to your Horizon application and adds a special 
+access token to the URL as a query parameter. Horizon automatically extracts the
+ token from the URL and uses it to generate the JWT that it saves in local 
+storage.</p>
+
+<h2 id="logout">Logout</h2>
+
+<p>When the user wants to log out of your Horizon application, all you have to do 
+is delete the JWT from local storage. The Horizon client library provides a 
+simple convenience method for performing that task:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">Horizon</span><span class="p">.</span><span class="nx">clearAuthTokens</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<p>To log the user back in, redirect them to the authentication endpoint again. For
+ subsequent logins, the OAuth provider will not prompt them to explicitly grant 
+permission.</p>
+
+<h2 id="a-working-example-built-with-vuejs">A working example built with Vue.js</h2>
+
+<p>In a Vue.js application, you can use a simple <code class="highlighter-rouge">v-if</code> directive to display 
+different views to authenticated and unauthenticated users. In the following 
+example, users who are not authenticated see a simple link that they can click 
+to login. Authenticated users see a greeting that displays their user ID and a 
+link that allows them to logout.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">v-if=</span><span class="s">"userId"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>You are logged in! Your user ID is: {{userId}}<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Click <span class="nt">&lt;a</span> <span class="err">@</span><span class="na">click=</span><span class="s">"logout"</span><span class="nt">&gt;</span>here<span class="nt">&lt;/a&gt;</span> to logout<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">v-if=</span><span class="s">"!userId"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>I don't know you. You should <span class="nt">&lt;a</span> <span class="err">@</span><span class="na">click=</span><span class="s">"login"</span><span class="nt">&gt;</span>login<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+  <span class="kr">const</span> <span class="nx">horizon</span> <span class="o">=</span> <span class="nx">Horizon</span><span class="p">();</span>
+
+  <span class="kd">let</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+    <span class="na">el</span><span class="p">:</span> <span class="s2">"#app"</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span><span class="na">userId</span><span class="p">:</span> <span class="kc">null</span><span class="p">},</span>
+    <span class="nx">ready</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">horizon</span><span class="p">.</span><span class="nx">hasAuthToken</span><span class="p">())</span>
+        <span class="nx">horizon</span><span class="p">.</span><span class="nx">currentUser</span><span class="p">().</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">user</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">userId</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="na">methods</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nx">login</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">horizon</span><span class="p">.</span><span class="nx">authEndpoint</span><span class="p">(</span><span class="s2">"github"</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">endpoint</span> <span class="o">=&gt;</span>
+          <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">);</span>
+      <span class="p">},</span>
+      <span class="nx">logout</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">Horizon</span><span class="p">.</span><span class="nx">clearAuthTokens</span><span class="p">();</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre>
+</div>
+
+<p>When Vue initializes, it triggers the application’s <code class="highlighter-rouge">ready</code> event handler. The 
+handler invokes <code class="highlighter-rouge">hasAuthToken</code> to check for a JWT in local storage. If it finds 
+a token, it calls <code class="highlighter-rouge">currentUser</code> to fetch the user’s account information. Upon 
+success, it assigns the user’s ID to a property called <code class="highlighter-rouge">userId</code>. In the 
+associated view, the <code class="highlighter-rouge">v-if</code> directive binds to the <code class="highlighter-rouge">userId</code> property and uses it
+ to decide whether to show the user a login prompt or the greeting.</p>
+
+<p>The login and logout links have simple <code class="highlighter-rouge">@click</code> handlers that perform their 
+respective operations. The login handler uses the <code class="highlighter-rouge">authEndpoint</code> method to fetch
+ the path for GitHub authentication and then performs the necessary redirect. 
+The logout handler simply clears the JWT from local storage as previously 
+described.</p>
+
+<h1 id="application-logic">Application logic</h1>
+
+<p>Now that the application supports authentication, it’s time to add the bookmark 
+management CRUD. Each bookmark document includes a URL, a title, the ID of the 
+owner, a creation timestamp, and a boolean value to indicate whether the 
+bookmark is public or private. The application stores the bookmark documents in 
+a collection called <code class="highlighter-rouge">bookmarks</code>.</p>
+
+<p>My application includes a simple form that lets the user input the bookmark 
+title and URL. When the user clicks the <code class="highlighter-rouge">Add</code> button, the event handler performs
+ a <code class="highlighter-rouge">store</code> query on the <code class="highlighter-rouge">bookmarks</code> collection, inserting a new document with 
+the properties bound to the form fields:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"add-bookmark"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h2&gt;</span>Add New Bookmark<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">v-model=</span><span class="s">"newBookmark.url"</span> <span class="na">placeholder=</span><span class="s">"URL"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">v-model=</span><span class="s">"newBookmark.title"</span> <span class="na">placeholder=</span><span class="s">"Title"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;button</span> <span class="err">@</span><span class="na">click=</span><span class="s">"addBookmark"</span><span class="nt">&gt;</span>Add<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">horizon</span> <span class="o">=</span> <span class="nx">Horizon</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">bookmarks</span> <span class="o">=</span> <span class="nx">horizon</span><span class="p">(</span><span class="s2">"bookmarks"</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">{</span>
+  <span class="nl">el</span><span class="p">:</span> <span class="s2">"body"</span><span class="p">,</span>
+  <span class="nx">data</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nl">userId</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">newBookmark</span><span class="err">:</span> <span class="p">{</span><span class="nl">url</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span> <span class="nx">title</span><span class="err">:</span> <span class="s2">""</span><span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nx">ready</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">horizon</span><span class="p">.</span><span class="nx">hasAuthToken</span><span class="p">())</span>
+        <span class="nx">horizon</span><span class="p">.</span><span class="nx">currentUser</span><span class="p">().</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">user</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">userId</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+  <span class="p">},</span>
+  <span class="nx">methods</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nx">login</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">horizon</span><span class="p">.</span><span class="nx">authEndpoint</span><span class="p">(</span><span class="s2">"github"</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">endpoint</span> <span class="o">=&gt;</span>
+        <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="nx">logout</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">Horizon</span><span class="p">.</span><span class="nx">clearAuthTokens</span><span class="p">();</span>
+    <span class="p">},</span>
+    <span class="nx">addBookmark</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">bookmarks</span><span class="p">.</span><span class="nx">store</span><span class="p">({</span>
+        <span class="na">user</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">userId</span><span class="p">,</span>
+        <span class="na">bookmark</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">newBookmark</span><span class="p">,</span>
+        <span class="na">time</span><span class="p">:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
+        <span class="na">shared</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="p">});</span>
+
+      <span class="k">this</span><span class="p">.</span><span class="nx">newBookmark</span> <span class="o">=</span> <span class="p">{</span><span class="na">url</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span> <span class="na">title</span><span class="p">:</span> <span class="s2">""</span><span class="p">};</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>To display the user’s bookmarks, the application uses a <code class="highlighter-rouge">findAll</code> query that 
+filters on the <code class="highlighter-rouge">user</code> field. I put the query in the <code class="highlighter-rouge">currentUser</code> callback so 
+that it will wait until the ID is available.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">horizon</span><span class="p">(</span><span class="s2">"bookmarks"</span><span class="p">).</span><span class="nx">findAll</span><span class="p">({</span><span class="na">user</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">userId</span><span class="p">})</span>
+                    <span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"time"</span><span class="p">,</span> <span class="s2">"descending"</span><span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">50</span><span class="p">).</span><span class="nx">watch</span><span class="p">()</span>
+                    <span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">bookmarks</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">bookmarks</span> <span class="o">=</span> <span class="nx">bookmarks</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">watch</code> method at the end of the query tells Horizon to provide live updates
+ as the user’s bookmarks change. The <code class="highlighter-rouge">subscribe</code> callback triggers every time 
+there is an update. The <code class="highlighter-rouge">bookmarks</code> parameter gets an array with the user’s 
+first 50 bookmarks in descending order. In the callback, the application takes 
+the bookmark array and assigns it to a property on the Vue instance.</p>
+
+<p>Using Vue’s <code class="highlighter-rouge">v-for</code> directive, it’s easy to set up data bindings that display 
+the bookmarks array in the application’s user interface:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bookmark"</span> <span class="na">v-for=</span><span class="s">"item in bookmarks"</span> <span class="na">track-by=</span><span class="s">"id"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{item.bookmark.url}}"</span><span class="nt">&gt;</span>{{bookmark.bookmark.title}}<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="err">@</span><span class="na">click=</span><span class="s">"remove(item)"</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="err">@</span><span class="na">click=</span><span class="s">"toggleShare(item)"</span><span class="nt">&gt;</span>
+    {{item.shared ? "Unshare" : "Share"}}
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p>The click handler for the “delete” link removes the object from the underlying 
+Horizon collection:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">remove</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">bookmarks</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>When Horizon completes the <code class="highlighter-rouge">remove</code> operation, it pushes an updated version of 
+the bookmark array to the <code class="highlighter-rouge">findAll</code> query. When the callback assigns the new 
+bookmarks array to the Vue instance property, the data bindings kick in and 
+update the HTML content to make it conform with the latest data: the deleted 
+bookmark disappears from the user interface.</p>
+
+<p>When the user shares a bookmark, the application simply replaces the document in
+ the collection with a new version of the document that has the <code class="highlighter-rouge">shared</code> 
+property set to <code class="highlighter-rouge">true</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">toggleShare</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">item</span><span class="p">.</span><span class="nx">shared</span> <span class="o">=</span> <span class="o">!</span><span class="nx">item</span><span class="p">.</span><span class="nx">shared</span><span class="p">;</span>
+  <span class="nx">bookmarks</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>I used a similar approach to make it possible for users to edit the bookmark’s 
+URL and title. The application displays a form like the one used for adding a 
+new bookmark–but when the user saves, it replaces the existing document instead
+ of creating a new one. On the backend, Horizon relies on the document’s <code class="highlighter-rouge">id</code> 
+attribute to determine which document to replace.</p>
+
+<p>In addition to displaying the user’s own bookmarks, the application also 
+displays a stream of public bookmarks shared by other users. The public feed is 
+powered by a Horizon <code class="highlighter-rouge">findAll</code> query, much like the one that displays the user’s
+ own bookmarks. Instead of filtering on the user’s ID, however, it filters on 
+the <code class="highlighter-rouge">shared</code> property:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">horizon</span><span class="p">(</span><span class="s2">"bookmarks"</span><span class="p">).</span><span class="nx">findAll</span><span class="p">({</span><span class="na">shared</span><span class="p">:</span> <span class="kc">true</span><span class="p">})</span>
+                    <span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"time"</span><span class="p">,</span> <span class="s2">"descending"</span><span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">50</span><span class="p">).</span><span class="nx">watch</span><span class="p">()</span>
+                    <span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">bookmarks</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">publicBookmarks</span> <span class="o">=</span> <span class="nx">bookmarks</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>In the <code class="highlighter-rouge">subscribe</code> callback, it assigns the bookmarks array to a Vue instance 
+property called <code class="highlighter-rouge">publicBookmarks</code>. The frontend binds to that array and displays
+ the contents, just like it does with the user’s bookmarks. I chose to 
+encapsulate the bookmark presentation in a simple Vue component that I reuse for
+ both the public stream and the private stream.</p>
+
+<h1 id="permissions">Permissions</h1>
+
+<p><img src="/images/posts/2016-07-22/permissions.png" style="width: 450px; float: right; display: inline-block;" /></p>
+
+<p>When you are ready to add permissions to your application, you will want to run 
+Horizon without the <code class="highlighter-rouge">--dev</code> flag so that you can ensure that your permissions 
+work as expected.</p>
+
+<p>Horizon’s permission system relies on a query whitelist. When a client performs 
+a query, the Horizon server compares the query with whitelist entries until it 
+finds one that matches. If no matching entry is found in the whitelist, the 
+server rejects the query. Each entry consists of:</p>
+
+<ul>
+  <li>A unique identifier that describes the purpose of the rule</li>
+  <li>A group name that specifies the scope of the rule and the users who are affected by its enforcement</li>
+  <li>A template that describes the structure of the query, including object attributes</li>
+  <li>An optional validation function written in JavaScript that performs arbitrary checks on the data affected by the user’s query</li>
+</ul>
+
+<p>Application developers can define custom groups to limit the scope of permission
+ rules. Horizon comes with a <code class="highlighter-rouge">default</code> group that applies to all users. There’s 
+also an <code class="highlighter-rouge">authenticated</code> group for rules that apply only to users who are logged 
+in.</p>
+
+<p>Horizon permissions are typically defined in a schema <code class="highlighter-rouge">toml</code> file, which also 
+describes the application’s collections and indexes. When you write or modify 
+your application’s schema file, you have to load the updated rules into 
+Horizon’s internal database.</p>
+
+<p>Horizon’s <code class="highlighter-rouge">hz</code> command line tool has a <code class="highlighter-rouge">set-schema</code> option that lets the user 
+load schema configuration from a file into the database. You can also use 
+<code class="highlighter-rouge">hz get-schema</code> to fetch the current configuration from the database. When you 
+start working on permissions, you will probably want to fetch the default schema
+ so that you have a starting point for writing your own. It includes any 
+collections and indexes that Horizon generated automatically while you were 
+prototyping your application. Out of the starting gate, the application’s schema
+ looks like this:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[collections.bookmarks]</span>
+<span class="py">indexes</span> <span class="p">=</span> <span class="nn">["shared_time","user_time"]</span>
+
+<span class="nn">[groups.admin]</span>
+<span class="nn">[groups.admin.rules.carte_blanche]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"any()"</span>
+</code></pre>
+</div>
+
+<p>With developer mode enabled, Horizon automatically creates the <code class="highlighter-rouge">shared_time</code> and
+ <code class="highlighter-rouge">user_time</code> compound indexes to handle the <code class="highlighter-rouge">findAll</code> queries. The 
+<code class="highlighter-rouge">carte_blanche</code> rule for the admin group makes it so that administrators can 
+perform any query.</p>
+
+<p>The bookmark demo application needs to enforce the following security 
+constraints:</p>
+
+<ul>
+  <li>All users get read-only access to the public stream of shared bookmarks</li>
+  <li>Authenticated users get access to their account info</li>
+  <li>Authenticated users get to add new bookmarks that belong to them</li>
+  <li>Authenticated users get read/write access to their own bookmarks</li>
+</ul>
+
+<p>To enforce the first constraint, the application schema includes a simple rule 
+that universally enables the <code class="highlighter-rouge">findAll</code> query on shared bookmarks:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.default]</span>
+<span class="nn">[groups.default.rules.fetch_public_bookmarks]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('bookmarks').findAll({shared: true})"</span>
+</code></pre>
+</div>
+
+<p>The rule operates on the <code class="highlighter-rouge">default</code> group, which means that it applies to all 
+users. The <code class="highlighter-rouge">fetch_public_bookmarks</code> identifier is an arbitrary name that I 
+picked to describe the rule. In the rule template, the object passed to 
+<code class="highlighter-rouge">findAll</code> shows what properties and values must be present in order for a user 
+query to successfully match. In this case, only a <code class="highlighter-rouge">findAll</code> query that looks for
+ shared bookmarks is allowed.</p>
+
+<p>Allowing authenticated users access their own bookmarks requires a very similar 
+whitelist entry. Instead of <code class="highlighter-rouge"><span class="p">{</span><span class="err">shared:</span><span class="w"> </span><span class="err">true</span><span class="p">}</span></code> in the <code class="highlighter-rouge">findAll</code> template, it uses 
+<code class="highlighter-rouge"><span class="p">{</span><span class="err">user:</span><span class="w"> </span><span class="err">userId()</span><span class="p">}</span></code>:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.authenticated]</span>
+<span class="nn">[groups.authenticated.rules.fetch_own_bookmarks]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('bookmarks').findAll({user: userId()})"</span>
+</code></pre>
+</div>
+
+<p>In a whitelist entry template, the <code class="highlighter-rouge">userId</code> function resolves to the ID of the 
+user who performs the query. In this case, the template only matches if the user
+ is filtering for bookmarks where the value of the <code class="highlighter-rouge">user</code> property is their own 
+ID.</p>
+
+<p>The <code class="highlighter-rouge">currentUser</code> method also performs a query under the hood, so the 
+application will need a rule that specifically allows querying the <code class="highlighter-rouge">users</code> 
+collection and fetching the record that corresponds with the user’s ID:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.authenticated.rules.read_current_user]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('users').find({id: userId()})"</span>
+</code></pre>
+</div>
+
+<p>To allow users to create new bookmarks, the whitelist needs a rule that matches 
+<code class="highlighter-rouge">store</code> queries. Once again, the template must use the <code class="highlighter-rouge">userId</code> function to 
+ensure that users only create bookmarks that belong to themselves:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.authenticated.rules.store_bookmark]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('bookmarks').store({user: userId(), time: any(), shared: any(true, false), bookmark: any()})"</span>
+</code></pre>
+</div>
+
+<p>The rule also performs some light checking on the other attributes in the new 
+object in order to ensure that it has roughly the right shape. The <code class="highlighter-rouge">any()</code> 
+function by itself indicates that any value is acceptable for the property. You 
+can also pass specific values to <code class="highlighter-rouge">any</code> to indicate that only those are allowed. 
+For example, specifying <code class="highlighter-rouge">any(true, false)</code> for the <code class="highlighter-rouge">shared</code> property ensures 
+that <code class="highlighter-rouge">shared</code> is always a boolean. If the user tries to insert an object that 
+lacks any of the specified properties, the query will fail because it doesn’t 
+match the template.</p>
+
+<h2 id="validator-functions">Validator functions</h2>
+
+<p>To support bookmark removal, the whitelist needs a rule that matches <code class="highlighter-rouge">remove</code> 
+queries. In this case, the template system by itself isn’t capable of expressing
+ a rule that prevents users from deleting bookmarks that belong to other users. 
+The whitelist entry needs a validator function:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.authenticated.rules.delete_own_bookmarks]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('bookmarks').remove()"</span>
+<span class="py">validator</span> <span class="p">=</span> <span class="s">"(user, oldVal, newVal) =&gt; oldVal.user === user.id"</span>
+</code></pre>
+</div>
+
+<p>Horizon uses a transaction-like system to apply validator logic. Horizon 
+performs the query, evaluates the validator, and then rolls back the query if 
+the validator returns false. The validator function gets to see what the 
+affected document looks like before and after the query is performed so that it 
+can make sure that the outcome is actually the desired result.</p>
+
+<p>The validator function gets three parameters: a context object that contains the
+ user’s account information, the original state of the document before the 
+query, and the new state of the document after the query.</p>
+
+<p>To make sure that the user doesn’t delete another user’s bookmark, the validator
+ compares the bookmark’s <code class="highlighter-rouge">user</code> property to the user’s ID to ensure a match.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>When you finish defining your permission rules in the <code class="highlighter-rouge">schema.toml</code> file, 
+remember to use <code class="highlighter-rouge">hz set-schema schema.toml</code> to push the latest version into the 
+Horizon backend.</p>
+
+<p>You can browse the <a href="https://github.com/rethinkdb/horizon-thinkmark">Thinkmark repository</a> on GitHub to see the bookmark 
+manager’s complete source code, including the <a href="https://github.com/rethinkdb/horizon-thinkmark/blob/master/schema.toml">schema file</a>.</p>
+
+<p>Ready to deploy your application? Check out Digital Ocean’s 
+<a href="/blog/digital-ocean-oneclick/">One-Click Horizon droplet</a>. For more details about Horizon, you can refer 
+to the <a href="/docs/">official documentation</a>.</p>
+
+<p><strong>Further Reading</strong></p>
+
+<ul>
+  <li>Horizon <a href="/docs/auth/">authentication</a> documentation</li>
+  <li>Horizon <a href="/docs/permissions/">permissions</a> documentation</li>
+  <li><a href="https://github.com/rethinkdb/horizon-thinkmark">Complete source code</a> of the Thinkmark demo</li>
+</ul>
+
+
+                </div>
+            </article>
+        </section>
+        <aside class="blog-sidebar">
+    <div class="blog-sidebar-container">
+        
+            <section class="read-more">
+                <h1>What is Horizon?</h1>
+                <p>
+                    Horizon is a <strong>realtime, open-source backend</strong> for
+                    JavaScript apps: <a href="/faq">learn how it works</a>.
+                </p>
+            </section>
+        
+        <section class="github-star">
+            <div class="infobox infobox-with-arrow infobox-alert popup hidden">
+                <h1>Like what you see?</h1>
+                <p>
+                    <i class="icon-github-popup"></i><a href="https://github.com/rethinkdb/horizon">Star this project</a> on GitHub.
+                </p>
+            </div>
+        </section>
+        
+    </div>
+</aside>
+
+    </div>
+</section>
+
+        </section>
+        <footer>
+            <div class="site-container">
+                <section class="about">
+                    <h1 class="hz">Horizon is a <strong>realtime, open-source backend</strong> for JavaScript apps.</h1>
+                    <a href="https://github.com/rethinkdb/horizon" class="button primary-button">Star the project on GitHub</a>
+                </section>
+                <section class="footer-right">
+                    <nav class="site-map">
+                        <section>
+                            <h1>Getting started</h1>
+                            <ul>
+                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="/install">Install</a></li>
+                                <li><a href="/docs/getting-started">Getting started</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Documentation</h1>
+                            <ul>
+                                <li><a href="/api/collection">Collection API</li>
+                                <li><a href="/api/horizon">Horizon API</a></li>
+                                <li><a href="/docs/cli">Horizon CLI</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Get involved</h1>
+                            <ul>
+                                <li><a href="http://slack.rethinkdb.com">Join us on Slack #horizon</a></li>
+                                <li><a href="https://discuss.horizon.io">Discuss on Discourse</a></li>
+                                <li><a href="https://rethinkdb.com/community/shirts-for-stories/">Shirts for Stories</a></li>
+                            </ul>
+                        </section>
+                    </nav>
+                    <h1 class="github">Built by the <a href="https://rethinkdb.com">RethinkDB team</a> and an amazing community.</h2>
+                </section>
+            </div>
+        </footer>
+        <script type="text/javascript">
+          var _gauges = _gauges || [];
+          (function() {
+            var t   = document.createElement('script');
+            t.type  = 'text/javascript';
+            t.async = true;
+            t.id    = 'gauges-tracker';
+            t.setAttribute('data-site-id', '56fb1a594b2ffa61f100a699');
+            t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+            t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(t, s);
+          })();
+        </script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-9922584-3', 'auto');
+          ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

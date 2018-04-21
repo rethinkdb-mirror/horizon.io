@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+    <head><script src="//archive.org/includes/analytics.js?v=cf34f82" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app43.us.archive.org';v.server_ms=345;archive_analytics.send_pageview({});});</script><script type="text/javascript" src="/static/js/wbhack.js?v=1522452177.0" charset="utf-8"></script>
+
+<script type="text/javascript">
+__wbhack.init('https://web.archive.org/web');
+</script>
+<link rel="stylesheet" type="text/css" href="/static/css/banner-styles.css?v=1522452177.0" />
+<link rel="stylesheet" type="text/css" href="/static/css/iconochive.css?v=1522452177.0" />
+
+<!-- End Wayback Rewrite JS Include -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Permissions and schema enforcement</title>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/github.css">
+
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="shortcut icon" href="/favicon/favicon.ico">
+
+        <!-- fonts.com -->
+        <script type="text/javascript">
+            // first, create the object that contains
+            // configuration variables
+            MTIConfig = {};
+
+            // next, add a variable that will control
+            // whether or not FOUT will be prevented
+            MTIConfig.EnableCustomFOUTHandler = false // true = prevent FOUT
+        </script>
+        <script type="text/javascript" src="//fast.fonts.net/jsapi/5cf5064a-b80d-4123-82d3-5c7a863edb22.js"></script>
+        <!-- jquery -->
+        <script type="text/javascript" src="/js/jquery/jquery-2.2.3.min.js"></script>
+        <!-- waypoints -->
+        <script type="text/javascript" src="/js/waypoints/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="/js/waypoints/sticky.min.js"></script>
+        <!-- horizon.io -->
+        <script type="text/javascript" src="/js/site.js"></script>
+    </head>
+    <body>
+        
+
+        <nav class="site-nav">
+            <div class="site-container">
+                <a class="logo" href="/images/horizon-logo.png" alt="Horizon"></a>
+                <ul class="navbar-links">
+                    <li class="menu-trigger">
+                        <svg height="24px" version="1.1" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="miu" stroke="none" stroke-width="1"><g id="Artboard-1" transform="translate(-395.000000, -479.000000)"><g id="slice" transform="translate(215.000000, 119.000000)"/><path d="M396.500836,485 C396.224232,485 396,485.214035 396,485.504684 L396,486.495316 C396,486.774045 396.217742,487 396.500836,487 L417.499164,487 C417.775768,487 418,486.785965 418,486.495316 L418,485.504684 C418,485.225955 417.782258,485 417.499164,485 L396.500836,485 Z M396.500836,490 C396.224232,490 396,490.214035 396,490.504684 L396,491.495316 C396,491.774045 396.217742,492 396.500836,492 L417.499164,492 C417.775768,492 418,491.785965 418,491.495316 L418,490.504684 C418,490.225955 417.782258,490 417.499164,490 L396.500836,490 Z M396.500836,495 C396.224232,495 396,495.214035 396,495.504684 L396,496.495316 C396,496.774045 396.217742,497 396.500836,497 L417.499164,497 C417.775768,497 418,496.785965 418,496.495316 L418,495.504684 C418,495.225955 417.782258,495 417.499164,495 L396.500836,495 Z" id="editor-list-view-hambuger-menu-glyph"/></g></g></svg>
+
+                    </li>
+                    <li>
+                        <a href="/cloud">Horizon Cloud</a>
+                    </li>
+                    <li>
+                        <a href="/install">Install</a>
+                    </li>
+                    <li>
+                        <a href="/faq">FAQ</a>
+                    </li>
+                    <li class="active">
+                        <a href="/docs">Docs</a>
+                    </li>
+                    <li>
+                        <a href="/community">Community</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="site-content">
+            <section class="documentation">
+    <div class="site-container">
+        <nav class="docs-nav">
+            
+            <section>
+                <h1>Horizon basics</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- index | permissions -->
+                            <a href="/docs">Overview</a>
+                        </li>
+                    
+                        <li>
+                            <!-- install | permissions -->
+                            <a href="/install">Install Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- faq | permissions -->
+                            <a href="/faq">FAQ</a>
+                        </li>
+                    
+                        <li>
+                            <!-- getting-started | permissions -->
+                            <a href="/docs/getting-started">Getting started</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+            <section>
+                <h1>Building Horizon apps</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- cli | permissions -->
+                            <a href="/docs/cli">Horizon CLI</a>
+                        </li>
+                    
+                        <li>
+                            <!-- auth | permissions -->
+                            <a href="/docs/auth">Authentication</a>
+                        </li>
+                    
+                        <li>
+                            <!-- users | permissions -->
+                            <a href="/docs/users">Users and groups</a>
+                        </li>
+                    
+                        <li class="active">
+                            <!-- permissions | permissions -->
+                            <a href="/docs/permissions">Permissions</a>
+                        </li>
+                    
+                        <li>
+                            <!-- api-collection | permissions -->
+                            <a href="/api/collection">Collection API</a>
+                        </li>
+                    
+                        <li>
+                            <!-- api-horizon | permissions -->
+                            <a href="/api/horizon">Horizon API</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+            <section>
+                <h1>Resources</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- config | permissions -->
+                            <a href="/docs/configuration">Configuring Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- embed | permissions -->
+                            <a href="/docs/embed">Embedding Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- examples | permissions -->
+                            <a href="/docs/examples">Example apps</a>
+                        </li>
+                    
+                        <li>
+                            <!-- limitations | permissions -->
+                            <a href="/docs/limitations">Limitations</a>
+                        </li>
+                    
+                        <li>
+                            <!-- docker | permissions -->
+                            <a href="/docs/docker">Horizon with Docker</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+        </nav>
+        <section class="docs-article document">
+            
+            <h1 class="title">Permissions and schema enforcement</h1>
+            <ul id="markdown-toc">
+  <li><a href="#the-whitelist" id="markdown-toc-the-whitelist">The whitelist</a></li>
+  <li><a href="#configuring" id="markdown-toc-configuring">Configuring rules</a></li>
+  <li><a href="#templates" id="markdown-toc-templates">Query templates</a>    <ul>
+      <li><a href="#template-placeholders" id="markdown-toc-template-placeholders">Placeholders</a></li>
+    </ul>
+  </li>
+  <li><a href="#validator_functions" id="markdown-toc-validator_functions">Validator functions</a>    <ul>
+      <li><a href="#validator_functions-semantics" id="markdown-toc-validator_functions-semantics">Execution semantics</a></li>
+    </ul>
+  </li>
+  <li><a href="#admin" id="markdown-toc-admin">Making an admin auth token</a></li>
+</ul>
+
+<h1 id="the-whitelist">The whitelist</h1>
+
+<p>Horizon’s permission system is based on a query whitelist. Any operation on a Horizon collection is disallowed by default, unless there is a rule that allows the operation.</p>
+
+<p>A whitelist rule has three properties that define which operations it covers:</p>
+
+<ul>
+  <li>A <a href="/docs/users">user group</a></li>
+  <li>A query template describing the type of operation</li>
+  <li>An optional validator function written in JavaScript that can be used to check the contents of the accessed documents, or to implement more complex permission checks</li>
+</ul>
+
+<p>You can use the special <code class="highlighter-rouge">"default"</code> group to create rules that apply to all users, authenticated or not. Or use the <code class="highlighter-rouge">"authenticated"</code> group to cover authenticated users only.</p>
+
+<div class="infobox">
+  <p><strong>A Horizon application allows <em>no</em> access to collections by default, even for authenticated users!</strong> You can use rules with the <code class="highlighter-rouge">anyRead</code> and <code class="highlighter-rouge">anyWrite</code> placeholders on each collection to grant access:</p>
+
+  <div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.authenticated.rules.read]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').anyRead()"</span>
+
+<span class="nn">[groups.authenticated.rules.write]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').anyWrite()"</span>
+</code></pre>
+  </div>
+
+  <p>These rules would allow users in the <code class="highlighter-rouge">authenticated</code> group complete read and write access to the “messages” collection. Much finer-grained control is possible; read on for more information.</p>
+</div>
+
+<p>For example the following rule allows authenticated users to read their own messages from the <code class="highlighter-rouge">messages</code> collection:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.authenticated.rules.read_own_messages]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').findAll({owner: userId()})"</span>
+</code></pre>
+</div>
+
+<p>This rule allows users to store new messages, as long as the new message has a correctly set <code class="highlighter-rouge">owner</code> field, a <code class="highlighter-rouge">message</code> field of type <code class="highlighter-rouge">string</code>, and no additional fields (apart from the auto-generated document ID):</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.authenticated.rules.store_message]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').store({owner: userId(), message: any()})"</span>
+<span class="c"># The template allows any value for the `message` field. We restrict it to strings by</span>
+<span class="c"># using a validator function:</span>
+<span class="py">validator</span> <span class="p">=</span> <span class="s">"""
+  // In case of a `store`, `oldValue` is always `null`.
+  // `newValue` is the document that's getting stored, and `context` provides additional
+  // details about the current user.
+  (context, oldValue, newValue) =&gt; {
+    return typeof newValue.message === 'string';
+  }
+"""</span>
+</code></pre>
+</div>
+
+<p>A given document can be read or written to by a user, if there is at least one rule on the whitelist for which</p>
+
+<ul>
+  <li>the user is a member of the specified group,</li>
+  <li>the query template matches the read or write operation,</li>
+  <li>and the specified validator function (if any) returns a <code class="highlighter-rouge">true</code> value.</li>
+</ul>
+
+<p>Note that permissions are not enforced when running the Horizon server in <a href="/docs/server#development-mode">development mode</a>. This is so that you can easily change and prototype the queries in your application without having to deal with maintaining corresponding entries in the whitelist.</p>
+
+<h1 id="configuring">Configuring rules</h1>
+
+<p>You can define whitelist rules and indexes as part of a schema file using the <a href="https://web.archive.org/web/20171008131400/https://github.com/toml-lang/toml">TOML</a> configuration format.</p>
+
+<p>The format for a whitelist rule specification is as follows:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.GROUP_NAME.rules.RULE_NAME]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"QUERY_TEMPLATE"</span>
+<span class="c"># Optional:</span>
+<span class="py">validator</span> <span class="p">=</span> <span class="s">"VALIDATOR_FUNCTION"</span>
+</code></pre>
+</div>
+
+<ul>
+  <li><code class="highlighter-rouge">GROUP_NAME</code> is the name of a <a href="/docs/users">user group</a> to which the rule should apply.</li>
+  <li><code class="highlighter-rouge">RULE_NAME</code> is an arbitrary name to identify the rule.</li>
+  <li><code class="highlighter-rouge">QUERY_TEMPLATE</code> must be a string that described the Horizon query that the rule applies to. See the section on <a href="#templates">Query templates</a> for details.</li>
+  <li><code class="highlighter-rouge">VALIDATOR_FUNCTION</code> can be set to a string containing a JavaScript function value. See the section on <a href="#validator_functions">Validator functions</a> for details.</li>
+</ul>
+
+<p>You can have an arbitrary number of rule specifications in your schema file.</p>
+
+<p>The format for an index specification is as follows:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[collections.COLLECTION_NAME]</span>
+<span class="nn">[[collections.COLLECTION_NAME.indexes]]</span>
+<span class="py">fields</span> <span class="p">=</span> <span class="nn">[['field_name']]</span>
+</code></pre>
+</div>
+
+<ul>
+  <li><code class="highlighter-rouge">COLLECTION_NAME</code> is the name of the collection with the index.</li>
+  <li><code class="highlighter-rouge">fields</code> is an array of one or more arrays, each array containing one field name. (This format is for future extensibility, when Horizon will support nested-field indexes.)
+    <ul>
+      <li>One field name creates a <a href="https://web.archive.org/web/20171008131400/https://www.rethinkdb.com/docs/secondary-indexes/javascript/#simple-indexes">simple index</a>.</li>
+      <li>Two or more field names create a <a href="https://web.archive.org/web/20171008131400/https://www.rethinkdb.com/docs/secondary-indexes/javascript/#compound-indexes">compound index</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Here is an example for a full schema file including collection and index specifications and the example rules from above:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[collections.messages]</span>
+<span class="nn">[[collections.messages.indexes]]</span>
+<span class="py">fields</span> <span class="p">=</span> <span class="nn">[['owner']]</span>
+
+<span class="nn">[groups.authenticated.rules.read_own_messages]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').findAll({owner: userId()})"</span>
+
+<span class="nn">[groups.authenticated.rules.store_message]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').store({owner: userId(), message: any()})"</span>
+<span class="py">validator</span> <span class="p">=</span> <span class="s">"""
+  (context, oldValue, newValue) =&gt; {
+    return typeof newValue.message === 'string';
+  }
+"""</span>
+</code></pre>
+</div>
+
+<p>Load a schema file into the Horizon cluster with <code class="highlighter-rouge">hz schema apply</code>:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># Load the default schema, .hz/schema.toml</span>
+<span class="gp">$ </span>hz schema apply
+
+<span class="c"># Load the schema from new_schema.toml</span>
+<span class="gp">$ </span>hz schema apply new_schema.toml
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">hz schema apply</code> replaces all existing rule, collection and index specifications. If loading the new schema causes collections to be deleted, the <code class="highlighter-rouge">hz schema apply</code> command will error. If you are sure that you want to delete those collections, you can specify the <code class="highlighter-rouge">--force</code> flag.</p>
+
+<p>The changed schema and permissions become effective immediately.</p>
+
+<p>You can extract the current schema from a Horizon cluster with <code class="highlighter-rouge">hz schema save</code>:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="c"># Save the current schema to the default file (.hz/schema.toml)</span>
+<span class="gp">$ </span>hz schema save
+
+<span class="c"># Save the current schema to current_schema.toml</span>
+<span class="gp">$ </span>hz schema save -o current_schema.toml
+</code></pre>
+</div>
+
+<h1 id="templates">Query templates</h1>
+
+<p>Query templates allow Horizon to determine which whitelist rule applies to a given query or write operation. Templates are specified in terms of a Horizon query.</p>
+
+<p>The starting point for any template is a collection from the <code class="highlighter-rouge">collection</code> function, similar to how you write <code class="highlighter-rouge">horizon(&lt;collection name&gt;)</code> in your Horizon application.</p>
+
+<p>A basic rule with a query template looks like this:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.default.rules.list_messages]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('public_messages')"</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">list_messages</code> rule allows read operations on the <code class="highlighter-rouge">public_messages</code> collection, such as:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">horizon</span><span class="p">(</span><span class="s1">'public_messages'</span><span class="p">).</span><span class="nx">fetch</span><span class="p">()</span>
+<span class="nx">horizon</span><span class="p">(</span><span class="s1">'public_messages'</span><span class="p">).</span><span class="nx">watch</span><span class="p">()</span>
+<span class="nx">horizon</span><span class="p">(</span><span class="s1">'public_messages'</span><span class="p">).</span><span class="nx">findAll</span><span class="p">({</span><span class="na">type</span><span class="p">:</span> <span class="s2">"announcement"</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">()</span>
+<span class="nx">horizon</span><span class="p">(</span><span class="s1">'public_messages'</span><span class="p">).</span><span class="nx">order</span><span class="p">(</span><span class="s2">"year"</span><span class="p">).</span><span class="nx">fetch</span><span class="p">()</span>
+<span class="nx">horizon</span><span class="p">(</span><span class="s1">'public_messages'</span><span class="p">).</span><span class="nx">order</span><span class="p">(</span><span class="s2">"year"</span><span class="p">).</span><span class="nx">above</span><span class="p">({</span><span class="na">year</span><span class="p">:</span> <span class="mi">2015</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<p>You can specify additional operations behind the collection:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="c"># Specifically allow listing public messages ordered by year</span>
+<span class="nn">[groups.default.rules.list_messages_by_year]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('public_messages').order('year')"</span>
+</code></pre>
+</div>
+
+<p>Placeholders can be used to enable a rule to match a number of different, but related queries:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="c"># Allow storing messages with arbitrary contents and year values</span>
+<span class="nn">[groups.default.rules.list_messages_by_year]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').store({message: any(), year: any()})"</span>
+</code></pre>
+</div>
+
+<h2 id="template-placeholders">Placeholders</h2>
+
+<p>There are four special placeholders you can use in a query template.</p>
+
+<h3 id="template-placeholders-any"><code class="highlighter-rouge">any()</code></h3>
+
+<p>The <code class="highlighter-rouge">any()</code> placeholder matches any value.</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="c"># Allow users to look up messages from any user</span>
+<span class="nn">[groups.authenticated.rules.lookup_messages]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').findAll({owner: any()})"</span>
+</code></pre>
+</div>
+
+<p>You can also specify a list of legal values by passing them to the <code class="highlighter-rouge">any()</code> call:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="c"># Allow users to look up messages of type "shared" or "announcement"</span>
+<span class="nn">[groups.authenticated.rules.lookup_public_messages]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').findAll({type: any('shared', 'announcement')})"</span>
+</code></pre>
+</div>
+
+<h3 id="template-placeholders-anyread"><code class="highlighter-rouge">anyRead()</code></h3>
+
+<p>The <code class="highlighter-rouge">anyRead()</code> placeholder matches any read operation or chain of read operations that can be performed on a collection.</p>
+
+<p>Horizon implicitly adds <code class="highlighter-rouge">anyRead()</code> to the end of any read template, unless the template ends in <code class="highlighter-rouge">fetch()</code> or <code class="highlighter-rouge">watch()</code>. This is useful because adding additional read operations can only further restrict the set of returned results, but never allow access to additional results.</p>
+
+<p>To allow only a specific read query, just finish the template off with <code class="highlighter-rouge">fetch()</code> or <code class="highlighter-rouge">watch()</code>:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.default.rules.list_messages_any]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('public_messages').fetch()"</span>
+</code></pre>
+</div>
+
+<p>This restricts the allowed queries as follows:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// This is still ok:</span>
+<span class="nx">horizon</span><span class="p">(</span><span class="s1">'public_messages'</span><span class="p">).</span><span class="nx">fetch</span><span class="p">()</span>
+
+<span class="c1">// These queries no longer match the template:</span>
+<span class="nx">horizon</span><span class="p">(</span><span class="s1">'public_messages'</span><span class="p">).</span><span class="nx">watch</span><span class="p">()</span>
+<span class="nx">horizon</span><span class="p">(</span><span class="s1">'public_messages'</span><span class="p">).</span><span class="nx">findAll</span><span class="p">({</span><span class="na">type</span><span class="p">:</span> <span class="s2">"announcement"</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">()</span>
+<span class="nx">horizon</span><span class="p">(</span><span class="s1">'public_messages'</span><span class="p">).</span><span class="nx">order</span><span class="p">(</span><span class="s2">"year"</span><span class="p">).</span><span class="nx">fetch</span><span class="p">()</span>
+<span class="nx">horizon</span><span class="p">(</span><span class="s1">'public_messages'</span><span class="p">).</span><span class="nx">order</span><span class="p">(</span><span class="s2">"year"</span><span class="p">).</span><span class="nx">above</span><span class="p">({</span><span class="na">year</span><span class="p">:</span> <span class="mi">2015</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<h3 id="template-placeholders-anywrite"><code class="highlighter-rouge">anyWrite()</code></h3>
+
+<p>The <code class="highlighter-rouge">anyWrite()</code> placeholder matches <code class="highlighter-rouge">store</code>, <code class="highlighter-rouge">replace</code>, <code class="highlighter-rouge">upsert</code>, <code class="highlighter-rouge">remove</code>, and <code class="highlighter-rouge">removeAll</code> operations.</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="c"># Allow users in the group "admin" to perform any write operation on `messages`:</span>
+<span class="nn">[groups.admin.rules.write_messages]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').anyWrite()"</span>
+</code></pre>
+</div>
+
+<h3 id="template-placeholders-userid"><code class="highlighter-rouge">userId()</code></h3>
+
+<p>The <code class="highlighter-rouge">userId()</code> placeholder matches the ID of the currently authenticated user (see <a href="/docs/auth">Authentication</a>). If no user is currently authenticated, it will match the <code class="highlighter-rouge">null</code> value.</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="c"># Allow users to read their own messages</span>
+<span class="nn">[groups.authenticated.rules.read_own_messages]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').findAll({owner: userId()})"</span>
+</code></pre>
+</div>
+
+<h1 id="validator_functions">Validator functions</h1>
+
+<p>Validator functions further restrict which operations a whitelist rule allows. In contrast to query templates which are static rules on the query structure, validator functions can be arbitrary JavaScript functions that take the data itself into account.</p>
+
+<p>The main use cases for validator functions are:</p>
+
+<ul>
+  <li>enforcing a data schema, including restrictions on value types or number ranges</li>
+  <li>implementing advanced restrictions that cannot be expressed with a query template</li>
+</ul>
+
+<p>A validator function receives either two or three arguments. For <em>read</em> operations:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">context</code> is the current user document, as described in <a href="/docs/users">Users and groups</a>, or <code class="highlighter-rouge">null</code> if no user is logged in</li>
+  <li><code class="highlighter-rouge">value</code> is the document being read</li>
+</ul>
+
+<p>For <em>write</em> operations:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">context</code> is the current user document, as described in <a href="/docs/users">Users and groups</a>, or <code class="highlighter-rouge">null</code> if no user is logged in</li>
+  <li><code class="highlighter-rouge">oldValue</code> contains the existing document before any write options, or <code class="highlighter-rouge">null</code> if a new document is being inserted</li>
+  <li><code class="highlighter-rouge">newValue</code> contains the new document the application wants to write, or <code class="highlighter-rouge">null</code> if a document is being removed</li>
+</ul>
+
+<p>The validator function is expected to return either <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code>.</p>
+
+<p>This whitelist rule allows store operations as long as the stored documents match a certain schema:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.authenticated.rules.store_message]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').store(any())"</span>
+<span class="c"># We require the message to be of the form {id: number, message: string} and have no</span>
+<span class="c"># extra fields.</span>
+<span class="py">validator</span> <span class="p">=</span> <span class="s">"""
+  (context, oldValue, newValue) =&gt; {
+    return newValue.hasOwnProperty('id')
+        &amp;&amp; typeof newValue.id === 'number'
+        &amp;&amp; newValue.hasOwnProperty('message')
+        &amp;&amp; typeof newValue.message === 'string'
+        &amp;&amp; Object.keys(newValue).length == 2;
+  }
+"""</span>
+</code></pre>
+</div>
+
+<p>We can also use a validator to restrict the types of updates that can be performed on a document. Here we add a rule that allows users to increment a counter value:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.authenticated.rules.store_message]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('messages').replace({id: any(), counter: any()})"</span>
+<span class="c"># The counter can only be incremented by one step at a time</span>
+<span class="py">validator</span> <span class="p">=</span> <span class="s">"""
+  (context, oldValue, newValue) =&gt; {
+    return newValue.counter == oldValue.counter + 1;
+  }
+"""</span>
+</code></pre>
+</div>
+
+<h2 id="validator_functions-semantics">Execution semantics</h2>
+
+<p>Validator functions are executed in a restricted context. They cannot perform any I/O and cannot access external data other than what is passed to the validator function through its arguments.</p>
+
+<p>The validator function of any matching rule is called once for each document that an operation touches. In case of a read query, every result document is validated through the validator function. For write operations, the validator function is executed atomically on the latest version of each document before the document is written. (If there are many concurrent writes being made to the same document, it is possible for this step to fail, but an error will be thrown to the application in such cases.)</p>
+
+<p>If an operation encounters a document for which no matching rule with a passing validator function exists, the operation will error.</p>
+
+<p>To understand how validator functions are executed, consider the following <code class="highlighter-rouge">integers</code> collection:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">horizon</span><span class="p">(</span><span class="s1">'integers'</span><span class="p">).</span><span class="nx">store</span><span class="p">([</span>
+    <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+  <span class="p">])</span>
+</code></pre>
+</div>
+
+<p>We can use the following rule to enable reading only odd integers from this collection:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.default.rules.read_odd]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('integers')"</span>
+<span class="py">validator</span> <span class="p">=</span> <span class="s">"""
+  (context, value) =&gt; {
+    return value.id % 2 == 1;
+  }
+"""</span>
+</code></pre>
+</div>
+
+<p>The semantics of this rule are straight-forward when reading individual documents:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// This will succeed</span>
+<span class="nx">horizon</span><span class="p">(</span><span class="s1">'integers'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">// This will error</span>
+<span class="nx">horizon</span><span class="p">(</span><span class="s1">'integers'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Now consider the query</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">horizon</span><span class="p">(</span><span class="s1">'integers'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>This query will error as soon as it encounters an even integer.</p>
+
+<p>Adding a second whitelist rule that allows reading even integers will make the query valid:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.default.rules.read_even]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('integers')"</span>
+<span class="py">validator</span> <span class="p">=</span> <span class="s">"""
+  (context, value) =&gt; {
+    return value.id % 2 == 0;
+  }
+"""</span>
+</code></pre>
+</div>
+
+<p>While there is no single rule that validates all results of the query, for each result there now is a matching rule for which the validator function passes.</p>
+
+<h1 id="admin">Making an admin auth token</h1>
+
+<p>To log in as the admin user initially, your application will need to be bootstrapped using the <a href="/cli/#make-token">hz make-token</a> command.</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>hz make-token admin
+</code></pre>
+</div>
+
+<p>A JSON Web Token will be printed to the console. Copy that token, and create a Horizon object with it:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">horizon</span> <span class="o">=</span> <span class="nx">Horizon</span><span class="p">({</span>
+    <span class="na">authType</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">token</span><span class="p">:</span> <span class="s2">"&lt;token&gt;"</span><span class="p">,</span>
+        <span class="na">storeLocally</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="nx">horizon</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<p>(The <code class="highlighter-rouge">storeLocally</code> option controls whether the token should be preserved in the browser’s local storage area; if you set it to <code class="highlighter-rouge">true</code>, you’ll remain logged in as the admin from this browser.)</p>
+
+<p>The <code class="highlighter-rouge">make-token</code> command can be used to create a token for any user, whether or not that user already exists in Horizon’s user database. If you wished to manually create a token for a user with the ID value of ‘4C720BD1-2729-46BA-9213-ED84DEDE3120`:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>hz make-token 4C720BD1-2729-46BA-9213-ED84DEDE3120
+</code></pre>
+</div>
+
+        </section>
+    </div>
+</section>
+
+        </section>
+        <footer>
+            <div class="site-container">
+                <section class="about">
+                    <h1 class="hz">Horizon is a <strong>realtime, open-source backend</strong> for JavaScript apps.</h1>
+                    <a href="https://web.archive.org/web/20171008131400/https://github.com/rethinkdb/horizon" class="button primary-button">Star the project on GitHub</a>
+                </section>
+                <section class="footer-right">
+                    <nav class="site-map">
+                        <section>
+                            <h1>Getting started</h1>
+                            <ul>
+                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="/install">Install</a></li>
+                                <li><a href="/docs/getting-started">Getting started</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Documentation</h1>
+                            <ul>
+                                <li><a href="/api/collection">Collection API</li>
+                                <li><a href="/api/horizon">Horizon API</a></li>
+                                <li><a href="/docs/cli">Horizon CLI</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Get involved</h1>
+                            <ul>
+                                <li><a href="https://web.archive.org/web/20171008131400/http://slack.rethinkdb.com/">Join us on Slack #horizon</a></li>
+                                <li><a href="https://web.archive.org/web/20171008131400/https://discuss.horizon.io/">Discuss on Discourse</a></li>
+                                <li><a href="https://web.archive.org/web/20171008131400/https://rethinkdb.com/community/shirts-for-stories/">Shirts for Stories</a></li>
+                            </ul>
+                        </section>
+                    </nav>
+                    <h1 class="github">Built by the <a href="https://web.archive.org/web/20171008131400/https://rethinkdb.com/">RethinkDB team</a> and an amazing community.</h2>
+                </section>
+            </div>
+        </footer>
+        <script type="text/javascript">
+          var _gauges = _gauges || [];
+          (function() {
+            var t   = document.createElement('script');
+            t.type  = 'text/javascript';
+            t.async = true;
+            t.id    = 'gauges-tracker';
+            t.setAttribute('data-site-id', '56fb1a594b2ffa61f100a699');
+            t.setAttribute('data-track-path', 'https://web.archive.org/web/20171008131400/https://track.gaug.es/track.gif');
+            t.src = 'https://web.archive.org/web/20171008131400/https://d36ee2fcip1434.cloudfront.net/track.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(t, s);
+          })();
+        </script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//web.archive.org/web/20171008131400/http://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-9922584-3', 'auto');
+          ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>
+<!--
+     FILE ARCHIVED ON 13:14:00 Oct 08, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:00:53 Apr 21, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  LoadShardBlock: 104.566 (3)
+  esindex: 0.007
+  captures_list: 121.634
+  CDXLines.iter: 10.412 (3)
+  PetaboxLoader3.datanode: 156.407 (5)
+  exclusion.robots: 0.303
+  exclusion.robots.policy: 0.253
+  RedisCDXSource: 1.737
+  PetaboxLoader3.resolve: 70.755
+  load_resource: 194.851 (2)
+-->

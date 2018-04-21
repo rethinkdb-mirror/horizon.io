@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Horizon: the realtime, open-source JavaScript backend</title>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/github.css">
+
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="shortcut icon" href="/favicon/favicon.ico">
+
+        <!-- fonts.com -->
+        <script type="text/javascript">
+            // first, create the object that contains
+            // configuration variables
+            MTIConfig = {};
+
+            // next, add a variable that will control
+            // whether or not FOUT will be prevented
+            MTIConfig.EnableCustomFOUTHandler = false // true = prevent FOUT
+        </script>
+        <script type="text/javascript" src="//fast.fonts.net/jsapi/5cf5064a-b80d-4123-82d3-5c7a863edb22.js"></script>
+        <!-- jquery -->
+        <script type="text/javascript" src="/js/jquery/jquery-2.2.3.min.js"></script>
+        <!-- waypoints -->
+        <script type="text/javascript" src="/js/waypoints/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="/js/waypoints/sticky.min.js"></script>
+        <!-- horizon.io -->
+        <script type="text/javascript" src="/js/site.js"></script>
+    </head>
+    <body>
+        
+
+        <nav class="site-nav simple">
+            <div class="site-container">
+                <a class="logo" href="/"><img src="/images/horizon-logo.png" alt="Horizon"></a>
+                <ul class="navbar-links">
+                    <li class="menu-trigger">
+                        <svg height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="miu" stroke="none" stroke-width="1"><g id="Artboard-1" transform="translate(-395.000000, -479.000000)"><g id="slice" transform="translate(215.000000, 119.000000)"/><path d="M396.500836,485 C396.224232,485 396,485.214035 396,485.504684 L396,486.495316 C396,486.774045 396.217742,487 396.500836,487 L417.499164,487 C417.775768,487 418,486.785965 418,486.495316 L418,485.504684 C418,485.225955 417.782258,485 417.499164,485 L396.500836,485 Z M396.500836,490 C396.224232,490 396,490.214035 396,490.504684 L396,491.495316 C396,491.774045 396.217742,492 396.500836,492 L417.499164,492 C417.775768,492 418,491.785965 418,491.495316 L418,490.504684 C418,490.225955 417.782258,490 417.499164,490 L396.500836,490 Z M396.500836,495 C396.224232,495 396,495.214035 396,495.504684 L396,496.495316 C396,496.774045 396.217742,497 396.500836,497 L417.499164,497 C417.775768,497 418,496.785965 418,496.495316 L418,495.504684 C418,495.225955 417.782258,495 417.499164,495 L396.500836,495 Z" id="editor-list-view-hambuger-menu-glyph"/></g></g></svg>
+
+                    </li>
+                    <li>
+                        <a href="/cloud">Horizon Cloud</a>
+                    </li>
+                    <li>
+                        <a href="/install">Install</a>
+                    </li>
+                    <li>
+                        <a href="/faq">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="/docs">Docs</a>
+                    </li>
+                    <li>
+                        <a href="/community">Community</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="site-content">
+            <section class="hero">
+    <div class="hero-left"></div>
+    <div class="hero-center site-container">
+        <h1><span>The realtime</span> <span>JavaScript backend</span></h1>
+        <h2><span>Build powerful web and</span> <span>mobile apps that scale</span></h2>
+        <a class="button primary-button" href="/install"><span>Install Horizon</span> <svg class="svg-icon icon-chevron-right-hairline" enable-background="new 0 0 15 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 15 26" width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="2.019,0.58 -0.035,2.634 10.646,13.316 -0.035,23.997 2.019,26.052 14.755,13.316 "/></svg>
+</a>
+    </div>
+    <div class="hero-right"></div>
+</section>
+
+<!-- intro -->
+<section class="intro">
+    <div class="site-container">
+        <section class="intro-content">
+            <h1>Horizon is a realtime, <strong> open-source backend</strong> for JavaScript apps.</h1>
+            <p>
+                Rapidly build and deploy web or mobile apps using a
+                simple JavaScript API. Scale your apps to millions of
+                users without any backend code.
+            </p>
+            <p>
+                Built by the <a href="https://rethinkdb.com">RethinkDB</a>
+                team and an open-source community, Horizon lets you build
+                sophisticated apps with lightning speed.
+            </p>
+        </section>
+        <section class="hz-animation">
+            <svg class="horizonSVG" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" text-rendering="optimizeSpeed">
+  <defs>
+<linearGradient id="warmSkyGrad" gradientUnits="userSpaceOnUse" x1="418.5291" y1="12" x2="418.5291" y2="419.5709">
+	<stop  offset="0" style="stop-color:#E84778"/>
+	<stop  offset="0.1552" style="stop-color:#EE6F7A"/>
+	<stop  offset="0.3347" style="stop-color:#F4967C"/>
+	<stop  offset="0.5122" style="stop-color:#F9B57D"/>
+	<stop  offset="0.6847" style="stop-color:#FCCB7E"/>
+	<stop  offset="0.85" style="stop-color:#FED87F"/>
+	<stop  offset="1" style="stop-color:#FFDD7F"/>
+</linearGradient>
+<linearGradient id="mountainSkyGrad" gradientUnits="userSpaceOnUse" x1="400" y1="65.7474" x2="400" y2="573.9511">
+	<stop  offset="0" style="stop-color:#E5F9FA"/>
+	<stop  offset="1" style="stop-color:#FFFFFF"/>
+</linearGradient>
+    <clipPath id="mainLogoMask">
+      <circle class="mainLogoMaskCircle" cx="400" cy="215" r="203.8"/>
+
+    </clipPath>
+  </defs>
+<rect class="skyBg" x="-400" y="-300" fill="url(#mountainSkyGrad)" width="1600" height="1200"/>
+    <g class="mainLogoGroup">
+  <g class="maskedLogoGroup" clip-path="url(#mainLogoMask)">
+  <rect class="warmSkyBg" fill="url(#warmSkyGrad)" width="1900" height="1200" x="-800" y="-600" opacity="0"/>
+<circle class="logoSun" fill="#FFFCEA" cx="400" cy="215" r="55.3"/>
+  <g class="waterGroup">
+	<rect id="waterCircle" x="0.2" fill="#5DB3C6" width="2014.1" height="278"/>
+	<path fill="#A5DCE4" d="M1710,0c-0.4,2.9-2.1,7.4-5.1,13.1c-15.3,21.7-54.3,38-89,40.2c-36.6,2.3-100.9,7.3-102.9,16.5
+		c-2,9.2,44.9,15.6,54.8,20.3c19.6,9.2,1.5,25.4-44.6,37.3c-26.2,6.8-106.5,18.5-147,23.7C1007,198.8,0,278,0,278v269h1007h0.2H2014
+		V0C2014,0,1743,0,1710,0z"/>
+  </g>
+</g>
+  </g>
+	<g class="allMountains" >
+<g class="smallGroup">
+    <g id="small2_1_">
+      <polygon fill="#D9D4E2" points="1530.4,229.3 1825.5,489.1 1240.1,489.1 		"/>
+      <polygon fill="#D9D4E2" points="1146.9,258.6 1213.3,305 1230.4,290.6 1506.1,489.1 836.2,489.1 		"/>
+    </g>
+    <g id="small1_1_">
+      <polygon fill="#D9D4E2" points="2519.4,229.3 2814.5,489.1 2229.1,489.1 		"/>
+      <polygon fill="#D9D4E2" points="2135.9,258.6 2202.3,305 2219.4,290.6 2495.1,489.1 1825.2,489.1 		"/>
+    </g>
+  </g>
+<g class="medGroup">
+    <g id="med3_1_">
+      <polygon fill="#B3A8C7" points="1824.4,134.3 2266.3,489.1 1334,489.1 		"/>
+      <polygon fill="#B3A8C7" points="862.6,143.1 1382.8,489.1 408,489.1 		"/>
+    </g>
+    <g id="med1_4_">
+      <polygon fill="#B3A8C7" points="3682.4,134.3 4124.3,489.1 3192,489.1 		"/>
+      <polygon fill="#B3A8C7" points="2720.6,143.1 3240.8,489.1 2266,489.1 		"/>
+    </g>
+    <g id="med1_3_">
+      <polygon fill="#B3A8C7" points="5540.4,134.3 5982.3,489.1 5050,489.1 		"/>
+      <polygon fill="#B3A8C7" points="4578.6,143.1 5098.8,489.1 4124,489.1 		"/>
+    </g>
+  </g>
+<g class="bigGroup">
+    <g id="big_7_">
+      <polygon fill="#7D76AA" points="541,12 1270.2,489.1 0,489.1 		"/>
+      <polygon fill="#7D76AA" points="2240.2,0 1511,489.1 2676,489.1 		"/>
+    </g>
+    <g id="big_6_">
+      <polygon fill="#7D76AA" points="3217,12 3946.2,489.1 2676,489.1 		"/>
+      <polygon fill="#7D76AA" points="4916.2,0 4187,489.1 5352,489.1 		"/>
+    </g>
+    <g id="big_5_">
+      <polygon fill="#7D76AA" points="5893,12 6622.2,489.1 5352,489.1 		"/>
+      <polygon fill="#7D76AA" points="7592.2,0 6863,489.1 8028,489.1 		"/>
+    </g>
+    <g id="big_4_">
+      <polygon fill="#7D76AA" points="8569,12 9298.2,489.1 8028,489.1 		"/>
+      <polygon fill="#7D76AA" points="10268.2,0 9539,489.1 10704,489.1 		"/>
+    </g>
+    </g>
+</g>
+<g class="horizon" fill="#7D7D7D" >
+		<path d="M259.9,278.7c0-1,0.5-1.6,1.5-1.6h1.2c1,0,1.6,0.6,1.6,1.6v16.1c0,1.5-0.3,2.6-0.3,2.6h0.1
+		c1.2-3,5.6-8.3,12.9-8.3c8,0,10.8,4.5,10.8,12.5v18.9c0,1-0.5,1.6-1.5,1.6h-1.2c-1,0-1.6-0.6-1.6-1.6v-17.7c0-5.1-0.8-9.5-7-9.5
+		c-6.8,0-12.2,5.6-12.2,13.3v14c0,1-0.6,1.6-1.6,1.6h-1.2c-1,0-1.5-0.6-1.5-1.6V278.7z"/>
+	<path d="M312,289.2c9.4,0,17,7.2,17,16.7c0,9.7-7.6,17-17,17c-9.4,0-17-7.3-17-17
+		C295.1,296.3,302.7,289.2,312,289.2z M312.1,319c6.8,0,12.5-5.6,12.5-13.1c0-7.3-5.6-12.8-12.5-12.8c-6.9,0-12.5,5.5-12.5,12.8
+		C299.6,313.3,305.2,319,312.1,319z"/>
+	<path d="M336.7,291.5c0-1,0.6-1.6,1.6-1.6h1.2c1,0,1.5,0.6,1.5,1.6v4.4c0,1.4-0.3,2.6-0.3,2.6h0.1
+		c1.5-4.7,5.2-8.7,10.4-8.7c1.2,0,1.7,0.5,1.7,1.5v1.2c0,1-0.7,1.6-1.8,1.6c-6.8,0-10,7.7-10,14.5v12c0,1-0.5,1.6-1.5,1.6h-1.2
+		c-1,0-1.6-0.6-1.6-1.6V291.5z"/>
+	<path d="M358.2,281v-2.3c0-1,0.5-1.6,1.5-1.6h1.6c1,0,1.5,0.6,1.5,1.6v2.3c0,1-0.5,1.5-1.5,1.5h-1.6
+		C358.7,282.6,358.2,282,358.2,281z M358.3,291.5c0-1,0.6-1.6,1.6-1.6h1.2c1,0,1.5,0.6,1.5,1.6v29c0,1-0.5,1.6-1.5,1.6h-1.2
+		c-1,0-1.6-0.6-1.6-1.6V291.5z"/>
+	<path d="M369.8,320.3c0-0.8,0.2-1.3,0.6-1.9l17.3-21.7c1.3-1.6,2.6-2.9,2.6-2.9v-0.1c0,0-1.1,0.1-3.2,0.1h-15
+		c-1,0-1.5-0.6-1.5-1.5v-0.7c0-1,0.5-1.6,1.5-1.6h22.5c1,0,1.5,0.5,1.5,1.4v0.4c0,0.8-0.2,1.3-0.6,1.9l-17.3,21.7
+		c-1.2,1.6-2.6,2.9-2.6,2.9v0.1c0,0,1.2-0.1,3.3-0.1h16.4c1,0,1.5,0.6,1.5,1.5v0.7c0,1-0.5,1.6-1.5,1.6h-23.9c-1,0-1.5-0.5-1.5-1.4
+		V320.3z"/>
+	<path d="M418,289.2c9.4,0,17,7.2,17,16.7c0,9.7-7.6,17-17,17c-9.4,0-17-7.3-17-17
+		C401.1,296.3,408.7,289.2,418,289.2z M418.1,319c6.8,0,12.5-5.6,12.5-13.1c0-7.3-5.6-12.8-12.5-12.8c-6.9,0-12.5,5.5-12.5,12.8
+		C405.5,313.3,411.2,319,418.1,319z"/>
+	<path d="M442.7,291.5c0-1,0.6-1.6,1.6-1.6h1.2c1,0,1.5,0.6,1.5,1.6v3.7c0,1.3-0.3,2.3-0.3,2.3h0.1
+		c1.2-2.9,5.4-8.4,13-8.4c8,0,10.8,4.5,10.8,12.5v18.9c0,1-0.6,1.6-1.6,1.6h-1.2c-1,0-1.5-0.6-1.5-1.6v-17.7c0-5.1-0.8-9.5-7-9.5
+		c-6.8,0-12.2,5.6-12.2,13.1v14.1c0,1-0.5,1.6-1.5,1.6h-1.2c-1,0-1.6-0.6-1.6-1.6V291.5z"/>
+	<path d="M479.5,318.3c0-1,0.5-1.5,1.5-1.5h2.1c1,0,1.5,0.6,1.5,1.5v2.2c0,1-0.5,1.6-1.5,1.6h-2.1
+		c-1,0-1.5-0.6-1.5-1.6V318.3z"/>
+	<path d="M493.9,281v-2.3c0-1,0.5-1.6,1.5-1.6h1.6c1,0,1.5,0.6,1.5,1.6v2.3c0,1-0.5,1.5-1.5,1.5h-1.6
+		C494.4,282.6,493.9,282,493.9,281z M494,291.5c0-1,0.6-1.6,1.6-1.6h1.2c1,0,1.5,0.6,1.5,1.6v29c0,1-0.5,1.6-1.5,1.6h-1.2
+		c-1,0-1.6-0.6-1.6-1.6V291.5z"/>
+	<path d="M523,289.2c9.4,0,17,7.2,17,16.7c0,9.7-7.6,17-17,17c-9.4,0-17-7.3-17-17
+		C506.1,296.3,513.7,289.2,523,289.2z M523.1,319c6.8,0,12.5-5.6,12.5-13.1c0-7.3-5.6-12.8-12.5-12.8c-6.9,0-12.5,5.5-12.5,12.8
+		C510.6,313.3,516.2,319,523.1,319z"/>
+</g>
+
+  <g class="wholeChat">
+
+<linearGradient id="chatPanelGrad" gradientUnits="userSpaceOnUse" x1="400" y1="375" x2="400" y2="182" >
+	<stop  offset="0" style="stop-color:#FFEAB6;stop-opacity:0.6"/>
+	<stop  offset="1" style="stop-color:#FEDA7F;stop-opacity:0"/>
+</linearGradient>
+<linearGradient id="chatMaskGrad" gradientUnits="userSpaceOnUse" x1="400" y1="205" x2="400" y2="182" >
+	<stop  offset="0" style="stop-color:#EEEEEE;stop-opacity:1"/>
+	<stop  offset="1" style="stop-color:#FEDA7F;stop-opacity:0"/>
+</linearGradient>
+<mask id="chatMask">
+  <rect class="chatMask" x="120" y="186" fill="url(#chatMaskGrad)" width="560" height="203"/>
+
+</mask>
+<rect class="chatPanel" x="140" y="186" fill="url(#chatPanelGrad)" width="520" height="203.1"/>
+
+<g class="allChat" mask="url(#chatMask)">
+    <g class="chat0 chatMessage">
+      <g>
+        <circle cx="213.63" cy="410" r="16.7" fill="#e84778"/>
+        <path d="M213.63,403.21a6.85,6.85,0,1,1-6.85,6.85A6.87,6.87,0,0,1,213.63,403.21Zm0,16.27c-6.16,0-8.83,2.78-9.74,4.08a16.68,16.68,0,0,0,19.48,0C222.46,422.26,219.79,419.48,213.63,419.48Z" fill="#fffcea"/>
+      </g>
+      <rect x="248.25" y="394.4" width="197.29" height="32.3" rx="6" ry="6" fill="#fffcea"/>
+    </g>
+    <g class="chat1 chatMessage">
+      <g>
+        <circle cx="586.37" cy="460.06" r="16.7" fill="#5db3c6"/>
+        <path d="M586.37,453.27a6.85,6.85,0,1,1-6.85,6.85A6.87,6.87,0,0,1,586.37,453.27Zm0,16.27c-6.16,0-8.83,2.78-9.74,4.08a16.68,16.68,0,0,0,19.48,0C595.2,472.32,592.53,469.54,586.37,469.54Z" fill="#fffcea"/>
+      </g>
+      <rect x="443.44" y="443.91" width="111.29" height="32.3" rx="4.63" ry="4.63" fill="#fff"/>
+    </g>
+    <g class="chat2 chatMessage">
+      <g>
+        <circle cx="586.37" cy="510.06" r="16.7" fill="#5db3c6"/>
+        <path d="M586.37,503.27a6.85,6.85,0,1,1-6.85,6.85A6.87,6.87,0,0,1,586.37,503.27Zm0,16.27c-6.16,0-8.83,2.78-9.74,4.08a16.68,16.68,0,0,0,19.48,0C595.2,522.32,592.53,519.54,586.37,519.54Z" fill="#fffcea"/>
+      </g>
+      <rect x="483.44" y="493.91" width="71.29" height="32.3" rx="4.63" ry="4.63" fill="#fff"/>
+    </g>
+    <g class="chat3 chatMessage">
+      <g>
+        <circle cx="213.63" cy="560.06" r="16.7" fill="#e84778"/>
+        <path d="M213.63,553.27a6.85,6.85,0,1,1-6.85,6.85A6.87,6.87,0,0,1,213.63,553.27Zm0,16.27c-6.16,0-8.83,2.78-9.74,4.08a16.68,16.68,0,0,0,19.48,0C222.46,572.32,219.79,569.54,213.63,569.54Z" fill="#fffcea"/>
+      </g>
+      <rect x="248.25" y="543.97" width="136.29" height="32.3" rx="4.63" ry="4.63" fill="#fffcea"/>
+    </g>
+    <g class="chat4 chatMessage">
+      <g>
+        <circle cx="586.37" cy="610" r="16.7" fill="#5db3c6"/>
+        <path d="M586.37,603.21a6.85,6.85,0,1,1-6.85,6.85A6.87,6.87,0,0,1,586.37,603.21Zm0,16.27c-6.16,0-8.83,2.78-9.74,4.08a16.68,16.68,0,0,0,19.48,0C595.2,622.26,592.53,619.48,586.37,619.48Z" fill="#fffcea"/>
+      </g>
+      <rect x="413.44" y="593.85" width="141.29" height="32.3" rx="4.63" ry="4.63" fill="#fff"/>
+    </g>
+    <g class="chat5 chatMessage">
+      <g>
+        <circle cx="213.63" cy="660.06" r="16.7" fill="#e84778"/>
+        <path d="M213.63,653.27a6.85,6.85,0,1,1-6.85,6.85A6.87,6.87,0,0,1,213.63,653.27Zm0,16.27c-6.16,0-8.83,2.78-9.74,4.08a16.68,16.68,0,0,0,19.48,0C222.46,672.32,219.79,669.54,213.63,669.54Z" fill="#fffcea"/>
+      </g>
+      <rect x="248.25" y="643.97" width="87.29" height="32.3" rx="4.63" ry="4.63" fill="#fffcea"/>
+    </g>
+  </g>
+</g>
+
+
+</svg>
+
+<svg class="devicesSVG"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+<defs>
+
+  <clipPath id="desktopMask">
+   <rect class="desktopMask" x="59" y="154" fill="#009444" width="388" height="231"/>
+
+  </clipPath>
+  <clipPath id="iPadMask">
+ <rect class="iPadMask" x="509" y="215" fill="#ED1C24" width="166" height="224"/>
+
+  </clipPath>
+ <clipPath id="phoneMask">
+  <rect class="phoneMask" x="716" y="333" fill="#ED1C24" width="61" height="107"/>
+  </clipPath>
+
+</defs>
+  <rect class="testing-canvas" width="100%" height="100%" fill="red"/>
+<g id="allDevices" >
+  <g class="desktopGroup device">
+    <g  clip-path="url(#desktopMask)">
+      <g class="desktopSVGContainer"></g>
+    </g>
+    <g>
+      <path fill="#707174" d="M208.9,416.3h83.2l-0.9-5.7c0,0-81.3,0-81.3,0L208.9,416.3z"/>
+      <rect x="61.3" y="156.3" fill="none" width="383" height="226.6"/>
+      <polygon fill="#A5A7AA" points="203.4,458.3 297.1,458.3 292.1,416.3 208.9,416.3 			"/>
+      </g>
+  <g>
+    <path fill="#5A5A5A" d="M458.3,131.3H45.8c-6.6,0-12,5-12,11.1v121v115.7v22c0,6.1,5.4,11.1,12,11.1h163.8h81.9h166.8
+      c6.6,0,12-5,12-11.1v-86.8v-116v-55.9C470.3,136.3,464.8,131.3,458.3,131.3z M446.3,318.2V385h-387v-10V259.3V154.3h387v47.9V318.2
+      z"/>
+    <path fill="#9E9E9E" d="M255.4,398.6c0.1-0.1,0.4-1.9,0.3-2.3c-0.1-0.4-1-1.6-1.6-2.1c-0.3-0.6-0.7-2.2-0.8-2.5
+      c-0.2-0.7-0.4-1-0.7-1.2c-0.2-0.2-0.6-0.7-1.8-0.8c-1.2-0.1-2.2,0.9-2.5,1.7c-0.1,0.2-0.2,0.8-0.4,1.9c-0.2,1.2-0.9,1.6-2.2,3
+      c-0.1,0.1-0.1,0.2-0.2,0.2c-0.1,0.3-0.4,1.1,0.1,1.6c0.4,0.4,0.7,0.6,1,0.7c-0.1,0.1-0.4,0.7,0.1,1c0.1,0.1,0.2,0.1,0.3,0.1
+      c-0.1,0.8-0.2,1.4-0.1,1.8c0,0.5,0.2,2.1,0.4,2.5c0.2,0.4,0.5,1.3,1.1,1.4c0.5,0.1,0.9-0.3,1.4-0.5s1.2-0.7,1.7-0.9
+      c0.2-0.1,0.3-0.1,0.4-0.2c0.3,0.3,0.9,0.9,1.2,1.1c0.2,0.1,0.5,0.2,0.9,0c0.4-0.2,0.8-1.3,1.1-2.2c0.3-0.9,0.5-1.7,0.3-4.1
+      C255.4,398.8,255.4,398.7,255.4,398.6z M247.5,400c-0.2,0-0.3,0-0.4,0C247.3,400,247.4,400,247.5,400z"/>
+  </g>
+
+</g>
+  <g class="iPadGroup device" >
+  <g  clip-path="url(#iPadMask)">
+      <g class="iPadSVGContainer"></g>
+
+  </g>
+    <g>
+      <path fill="#5A5A5A" d="M680.1,195h-177c-6.6,0-12,5.4-12,12v108.5v101.1v0.5v29.5c0,6.6,5.4,12,12,12h177c6.6,0,12-5.4,12-12
+        v-60.2v-0.5V273.1V207C692.1,200.4,686.7,195,680.1,195z M674.1,277.3V389v0.5v49.1h-165V414v-0.5V311.3v-95.8h165V277.3z"/>
+    </g>
+    <g>
+      <circle fill="#7C7D80" cx="591.3" cy="204.7" r="1.4"/>
+      <g>
+        <path fill="#444444" d="M591.6,444.3c-2.1,0-3.9,1.6-4.1,3.7c0-0.2,0-0.3,0-0.5c0-2.3,1.9-4.2,4.2-4.2s4.2,1.9,4.2,4.2
+          c0,0.2,0,0.3,0,0.5C595.5,446,593.8,444.3,591.6,444.3z"/>
+        <path fill="#7B7C7F" d="M591.6,444.3c2.1,0,3.9,1.6,4.1,3.7c-0.2,2.1-2,3.7-4.1,3.7s-3.9-1.6-4.1-3.7
+          C587.7,446,589.5,444.3,591.6,444.3z"/>
+      </g>
+    </g>
+
+</g>
+  <g class="phoneGroup device">
+
+      <g  clip-path="url(#phoneMask)">
+        <g class="phoneSVGContainer"></g>
+      </g>
+      <g>
+        <rect x="716.7" y="334" fill="none" width="59.8" height="105.3"/>
+        <path fill="#5A5A5A" d="M768.7,315c0,0-2.5,0-2.9,0l-0.1,0h-5.5l-2.2,0h-33.2c-6.7,0-12.2,5.4-12.2,12v6.6v0.5v0.4v5.3v8.9v7.6
+          v2.1v7.4v1v79.5c0,6.6,5.5,12,12.2,12h43.8c6.7,0,12.2-5.4,12.2-12V327C780.8,320.4,775.3,315,768.7,315z M776.5,439.3h-59.8V334
+          h59.8V439.3z"/>
+      </g>
+      <g>
+        <circle fill="#7C7D80" cx="746.7" cy="324.8" r="1.4"/>
+        <g>
+          <path fill="#444444" d="M746.6,445.2c-2.1,0-3.9,1.6-4.1,3.7c0-0.2,0-0.3,0-0.5c0-2.3,1.9-4.2,4.2-4.2c2.3,0,4.2,1.9,4.2,4.2
+            c0,0.2,0,0.3,0,0.5C750.5,446.9,748.7,445.2,746.6,445.2z"/>
+          <path fill="#7B7C7F" d="M746.6,445.2c2.1,0,3.9,1.6,4.1,3.7c-0.2,2.1-2,3.7-4.1,3.7c-2.1,0-3.9-1.6-4.1-3.7
+            C742.7,446.9,744.4,445.2,746.6,445.2z"/>
+        </g>
+      </g>
+</g>
+
+
+  </g>
+</svg>
+
+            <!--<div class="terminal-window">
+                <header></header>
+                <section class="terminal">
+                    <div class="history"></div>
+                    $&nbsp;<span class="prompt"></span>
+                    <span class="typed-cursor"></span>
+                </section>
+            </div>-->
+        </section>
+    </div>
+</section>
+
+<section class="screencast">
+    <div class="site-container">
+        <h1>Rapidly <strong>prototype, build, and deploy</strong> JavaScript apps with Horizon.</h1>
+        <div class="screencast-container">
+            <section class="screencast-description">
+                <h2>Everything you need to build realtime apps</h2>
+                <p>
+                  The Horizon server packages a realtime database with
+                  convenient APIs and services that make it easy to
+                  use modern JavaScript frameworks like React,
+                  Angular, and React Native.
+                </p>
+                <a class="button primary-button" href="/docs"><span>Read the docs</span> <svg class="svg-icon icon-chevron-right-hairline" enable-background="new 0 0 15 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 15 26" width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="2.019,0.58 -0.035,2.634 10.646,13.316 -0.035,23.997 2.019,26.052 14.755,13.316 "/></svg>
+</a>
+            </section>
+            <section class="hz-screenshot-container">
+                <iframe width="590" height="310" src="https://www.youtube.com/embed/Sb1lH5mvYmU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>                <!--<div class="hz-screenshot"><div class="play-button"></div></div>-->
+            </section>
+            <!--<iframe width="960" height="540" src="https://www.youtube.com/embed/Sb1lH5mvYmU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>-->
+        </div>
+    </div>
+</section>
+
+<!-- features -->
+<section class="features">
+    <div class="site-container">
+        <article class="modules">
+            <h1>Modular and extensible</h1>
+            <p>
+                Horizon is distributed as a standalone server for
+                browser-based JavaScript apps. When you're ready to
+                write custom backend code, you can load the Horizon
+                modules directly in Node.js. RethinkDB is bundled with
+                Horizon, so you can make direct database queries on
+                the backend using the powerful query language ReQL,
+                for flexible joins, aggregations, binary file support,
+                and rich querying.
+            </p>
+        </article>
+        <article class="rethinkdb">
+            <h1>Realtime by default</h1>
+            <p>
+                Horizon is built
+                on <a href="https://rethinkdb.com">RethinkDB</a>, a
+                massively scalable, open-source database capable of
+                millions of realtime updates per second. Horizon and
+                RethinkDB push updates to the client in realtime, so
+                your apps can offer engaging experiences with no extra
+                work.
+            </p>
+        </article>
+        <article class="auth">
+            <h1>Security and authentication</h1>
+            <p>
+                Authenticate users through Facebook, Twitter, Google,
+                GitHub, and other services. Secure your app, manage
+                user accounts, sessions, and permissions through
+                convenient APIs.
+            </p>
+        </article>
+        <article class="open-source">
+            <h1>Built with love by the open source community</h1>
+            <p>
+                Developed by a core team of realtime data experts
+                and over 100 contributors from around the
+                world, Horizon is shaped by developers like
+                you in <a href="/community">an
+                open development process</a>.
+            </p>
+        </article>
+    </div>
+</section>
+<section class="get-started">
+    <div class="site-container">
+        <h1>Build your first Horizon app with the ten-minute guide.</h1>
+        <div class="get-started-action">
+            <a class="button primary-button" href="/docs/getting-started"><span>Get started</span> <svg class="svg-icon icon-chevron-right-hairline" enable-background="new 0 0 15 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 15 26" width="15px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="2.019,0.58 -0.035,2.634 10.646,13.316 -0.035,23.997 2.019,26.052 14.755,13.316 "/></svg>
+</a>
+        </div>
+    </div>
+</section>
+
+<!--<script type="text/javascript" src="http://www.mattboldt.com/demos/typed-js/js/typed.custom.js"></script>
+<script src="/js/terminal.js" /></script>-->
+<link href="/css/hz-animation.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.3/TweenMax.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/35984/AnticipateEase.min.js"></script>
+<script src="/js/hz-animation.js"></script>
+
+        </section>
+        <footer>
+            <div class="site-container">
+                <section class="about">
+                    <h1 class="hz">Horizon is a <strong>realtime, open-source backend</strong> for JavaScript apps.</h1>
+                    <a href="https://github.com/rethinkdb/horizon" class="button primary-button">Star the project on GitHub</a>
+                </section>
+                <section class="footer-right">
+                    <nav class="site-map">
+                        <section>
+                            <h1>Getting started</h1>
+                            <ul>
+                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="/install">Install</a></li>
+                                <li><a href="/docs/getting-started">Getting started</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Documentation</h1>
+                            <ul>
+                                <li><a href="/api/collection">Collection API</li>
+                                <li><a href="/api/horizon">Horizon API</a></li>
+                                <li><a href="/docs/cli">Horizon CLI</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Get involved</h1>
+                            <ul>
+                                <li><a href="http://slack.rethinkdb.com">Join us on Slack #horizon</a></li>
+                                <li><a href="https://discuss.horizon.io">Discuss on Discourse</a></li>
+                                <li><a href="https://rethinkdb.com/community/shirts-for-stories/">Shirts for Stories</a></li>
+                            </ul>
+                        </section>
+                    </nav>
+                    <h1 class="github">Built by the <a href="https://rethinkdb.com">RethinkDB team</a> and an amazing community.</h2>
+                </section>
+            </div>
+        </footer>
+        <script type="text/javascript">
+          var _gauges = _gauges || [];
+          (function() {
+            var t   = document.createElement('script');
+            t.type  = 'text/javascript';
+            t.async = true;
+            t.id    = 'gauges-tracker';
+            t.setAttribute('data-site-id', '56fb1a594b2ffa61f100a699');
+            t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+            t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(t, s);
+          })();
+        </script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-9922584-3', 'auto');
+          ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

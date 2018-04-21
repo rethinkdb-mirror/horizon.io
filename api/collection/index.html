@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Collection</title>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/github.css">
+
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="shortcut icon" href="/favicon/favicon.ico">
+
+        <!-- fonts.com -->
+        <script type="text/javascript">
+            // first, create the object that contains
+            // configuration variables
+            MTIConfig = {};
+
+            // next, add a variable that will control
+            // whether or not FOUT will be prevented
+            MTIConfig.EnableCustomFOUTHandler = false // true = prevent FOUT
+        </script>
+        <script type="text/javascript" src="//fast.fonts.net/jsapi/5cf5064a-b80d-4123-82d3-5c7a863edb22.js"></script>
+        <!-- jquery -->
+        <script type="text/javascript" src="/js/jquery/jquery-2.2.3.min.js"></script>
+        <!-- waypoints -->
+        <script type="text/javascript" src="/js/waypoints/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="/js/waypoints/sticky.min.js"></script>
+        <!-- horizon.io -->
+        <script type="text/javascript" src="/js/site.js"></script>
+    </head>
+    <body>
+        
+
+        <nav class="site-nav">
+            <div class="site-container">
+                <a class="logo" href="/"><img src="/images/horizon-logo.png" alt="Horizon"></a>
+                <ul class="navbar-links">
+                    <li class="menu-trigger">
+                        <svg height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="miu" stroke="none" stroke-width="1"><g id="Artboard-1" transform="translate(-395.000000, -479.000000)"><g id="slice" transform="translate(215.000000, 119.000000)"/><path d="M396.500836,485 C396.224232,485 396,485.214035 396,485.504684 L396,486.495316 C396,486.774045 396.217742,487 396.500836,487 L417.499164,487 C417.775768,487 418,486.785965 418,486.495316 L418,485.504684 C418,485.225955 417.782258,485 417.499164,485 L396.500836,485 Z M396.500836,490 C396.224232,490 396,490.214035 396,490.504684 L396,491.495316 C396,491.774045 396.217742,492 396.500836,492 L417.499164,492 C417.775768,492 418,491.785965 418,491.495316 L418,490.504684 C418,490.225955 417.782258,490 417.499164,490 L396.500836,490 Z M396.500836,495 C396.224232,495 396,495.214035 396,495.504684 L396,496.495316 C396,496.774045 396.217742,497 396.500836,497 L417.499164,497 C417.775768,497 418,496.785965 418,496.495316 L418,495.504684 C418,495.225955 417.782258,495 417.499164,495 L396.500836,495 Z" id="editor-list-view-hambuger-menu-glyph"/></g></g></svg>
+
+                    </li>
+                    <li>
+                        <a href="/cloud">Horizon Cloud</a>
+                    </li>
+                    <li>
+                        <a href="/install">Install</a>
+                    </li>
+                    <li>
+                        <a href="/faq">FAQ</a>
+                    </li>
+                    <li class="active">
+                        <a href="/docs">Docs</a>
+                    </li>
+                    <li>
+                        <a href="/community">Community</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="site-content">
+            <section class="documentation">
+    <div class="site-container">
+        <nav class="docs-nav">
+            
+            <section>
+                <h1>Horizon basics</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- index | api-collection -->
+                            <a href="/docs">Overview</a>
+                        </li>
+                    
+                        <li>
+                            <!-- install | api-collection -->
+                            <a href="/install">Install Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- faq | api-collection -->
+                            <a href="/faq">FAQ</a>
+                        </li>
+                    
+                        <li>
+                            <!-- getting-started | api-collection -->
+                            <a href="/docs/getting-started">Getting started</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+            <section>
+                <h1>Building Horizon apps</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- cli | api-collection -->
+                            <a href="/docs/cli">Horizon CLI</a>
+                        </li>
+                    
+                        <li>
+                            <!-- auth | api-collection -->
+                            <a href="/docs/auth">Authentication</a>
+                        </li>
+                    
+                        <li>
+                            <!-- users | api-collection -->
+                            <a href="/docs/users">Users and groups</a>
+                        </li>
+                    
+                        <li>
+                            <!-- permissions | api-collection -->
+                            <a href="/docs/permissions">Permissions</a>
+                        </li>
+                    
+                        <li class="active">
+                            <!-- api-collection | api-collection -->
+                            <a href="/api/collection">Collection API</a>
+                        </li>
+                    
+                        <li>
+                            <!-- api-horizon | api-collection -->
+                            <a href="/api/horizon">Horizon API</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+            <section>
+                <h1>Resources</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- config | api-collection -->
+                            <a href="/docs/configuration">Configuring Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- embed | api-collection -->
+                            <a href="/docs/embed">Embedding Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- examples | api-collection -->
+                            <a href="/docs/examples">Example apps</a>
+                        </li>
+                    
+                        <li>
+                            <!-- limitations | api-collection -->
+                            <a href="/docs/limitations">Limitations</a>
+                        </li>
+                    
+                        <li>
+                            <!-- docker | api-collection -->
+                            <a href="/docs/docker">Horizon with Docker</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+        </nav>
+        <section class="docs-article document">
+            
+            <h1 class="title">Collection</h1>
+            <p>The <code class="highlighter-rouge">Collection</code> object represents a group of related documents, and is backed by a RethinkDB table. Documents in a <code class="highlighter-rouge">Collection</code> are identified by a unique key stored in the <code class="highlighter-rouge">id</code> field.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// connect to the Horizon server, after Horizon has been loaded via</span>
+<span class="c1">// &lt;script&gt; tag or require</span>
+<span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+
+<span class="c1">// get a handle to a Collection</span>
+<span class="kr">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>Collections that do not exist will automatically be created in development mode, or in production if the <code class="highlighter-rouge">auto-create-collection</code> option is set. Note that a collection name may not start with the prefix <code class="highlighter-rouge">hz_</code>.</p>
+
+<p>Methods on a <code class="highlighter-rouge">Collection</code> object allow you to create, read, update and delete documents. Selections can be performed by matching on any field by passing an object to match against.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// Store a message</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">store</span><span class="p">({</span>
+    <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="nx">avatar_url</span><span class="p">,</span>
+    <span class="na">from</span><span class="p">:</span> <span class="s2">"bob"</span><span class="p">,</span>
+    <span class="na">text</span><span class="p">:</span> <span class="s2">"Hello from RethinkDB"</span>
+<span class="p">});</span>
+
+<span class="c1">// get the first message from Bob</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="na">from</span><span class="p">:</span> <span class="s2">"bob"</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">msg</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">));</span>
+
+<span class="c1">// the same, using a Horizon object directly</span>
+<span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">).</span><span class="nx">find</span><span class="p">({</span><span class="na">from</span><span class="p">:</span> <span class="s2">"bob"</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">msg</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">));</span>
+
+<span class="c1">// get the message with ID 101; a "shortcut" that only works when fetching based on the</span>
+<span class="c1">// unique document ID (the equivalent long form is `find({id: 101})`)</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="mi">101</span><span class="p">).</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">msg</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">));</span>
+
+<span class="c1">// get all messages from Bob, ordered by ID</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"id"</span><span class="p">).</span><span class="nx">findAll</span><span class="p">({</span><span class="na">from</span><span class="p">:</span> <span class="s2">"bob"</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">msg</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">));</span>
+</code></pre>
+</div>
+
+<h1 class="no_toc" id="methods">Methods</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#fetch" id="markdown-toc-fetch">Collection.fetch</a></li>
+  <li><a href="#subscribe" id="markdown-toc-subscribe">Collection.subscribe</a></li>
+  <li><a href="#watch" id="markdown-toc-watch">Collection.watch</a></li>
+  <li><a href="#above" id="markdown-toc-above">Collection.above</a></li>
+  <li><a href="#below" id="markdown-toc-below">Collection.below</a></li>
+  <li><a href="#find" id="markdown-toc-find">Collection.find</a></li>
+  <li><a href="#findall" id="markdown-toc-findall">Collection.findAll</a></li>
+  <li><a href="#limit" id="markdown-toc-limit">Collection.limit</a></li>
+  <li><a href="#order" id="markdown-toc-order">Collection.order</a></li>
+  <li><a href="#remove" id="markdown-toc-remove">Collection.remove</a></li>
+  <li><a href="#removeall" id="markdown-toc-removeall">Collection.removeAll</a></li>
+  <li><a href="#insert" id="markdown-toc-insert">Collection.insert</a></li>
+  <li><a href="#replace" id="markdown-toc-replace">Collection.replace</a></li>
+  <li><a href="#store" id="markdown-toc-store">Collection.store</a></li>
+  <li><a href="#update" id="markdown-toc-update">Collection.update</a></li>
+  <li><a href="#upsert" id="markdown-toc-upsert">Collection.upsert</a></li>
+  <li><a href="#aggregates-and-models" id="markdown-toc-aggregates-and-models">Aggregates and models</a></li>
+  <li><a href="#rxjs-observable-methods-and-operators" id="markdown-toc-rxjs-observable-methods-and-operators">RxJS Observable methods and operators</a></li>
+</ul>
+
+<h2 id="fetch">Collection.fetch</h2>
+
+<p>Return a <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html">RxJS Observable</a> containing the query result set as an array.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">fetch</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<p>Unlike <a href="#watch">watch</a>, the <code class="highlighter-rouge">fetch</code> command does not update in real time, but rather returns a “snapshot” of the result set as it exists when <code class="highlighter-rouge">fetch</code> is executed. The <code class="highlighter-rouge">fetch</code> or <code class="highlighter-rouge">watch</code> command ends a Horizon query.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+
+<span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">).</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span>
+    <span class="nx">result</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Result:'</span><span class="p">,</span> <span class="nx">result</span><span class="p">),</span>
+    <span class="nx">err</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+    <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Results fetched'</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre>
+</div>
+
+<h2 id="subscribe">Collection.subscribe</h2>
+
+<p>Provide handlers to a Collection result set.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">readFunction</span><span class="p">,</span> <span class="nx">errorFunction</span><span class="p">,</span> <span class="nx">completedFunction</span><span class="p">)</span>
+<span class="nx">Collection</span><span class="p">.</span><span class="nx">store</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">writeFunction</span><span class="p">,</span> <span class="nx">errorFunction</span><span class="p">)</span>
+<span class="nx">Collection</span><span class="p">.</span><span class="nx">watch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">changefeedFunction</span><span class="p">,</span> <span class="nx">errorFunction</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>This method is not actually part of the <code class="highlighter-rouge">Collection</code> class, but is instead a <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-subscribe">RxJS method</a>.</p>
+
+<p>When <code class="highlighter-rouge">subscribe</code> is chained off a read function (i.e., <a href="#watch">watch</a>) it takes three callback functions:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">next(result)</code>: a callback that receives a single document as the Collection is iterated through</li>
+  <li><code class="highlighter-rouge">error(error)</code>: a callback that receives error information if an error occurs</li>
+  <li><code class="highlighter-rouge">complete()</code>: a callback executed when the result set has been iterated through completely</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+
+<span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">).</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span>
+    <span class="nx">result</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Result:'</span><span class="p">,</span> <span class="nx">result</span><span class="p">),</span>
+    <span class="nx">err</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">),</span>
+    <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Results fetched'</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre>
+</div>
+
+<p>Note that when <code class="highlighter-rouge">subscribe</code> is chained after <a href="#fetch">fetch</a>, the <code class="highlighter-rouge">next</code> callback will receive a single array containing the entire result set at once.</p>
+
+<p>When chained off a write function (e.g., <a href="#store">store</a>, <a href="#upsert">upsert</a>), it takes two callback functions:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">write(id)</code>: a callback that receives the <code class="highlighter-rouge">id</code> of the documents written, one at a time</li>
+  <li><code class="highlighter-rouge">error(error)</code>: a callback that receives error information if an error occurs</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">).</span><span class="nx">store</span><span class="p">([</span>
+    <span class="p">{</span>
+        <span class="na">from</span><span class="p">:</span> <span class="s2">"agatha"</span><span class="p">,</span>
+        <span class="na">text</span><span class="p">:</span> <span class="s2">"Meet at Smugglers' Cove on Saturday"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="na">from</span><span class="p">:</span> <span class="s2">"bob"</span><span class="p">,</span>
+        <span class="na">text</span><span class="p">:</span> <span class="s2">"Would Superman lose a fight against Wonder Woman?"</span>
+    <span class="p">}</span>
+<span class="p">]).</span><span class="nx">subscribe</span><span class="p">(</span>
+    <span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"id value:"</span><span class="p">,</span> <span class="nx">id</span><span class="p">),</span>
+    <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre>
+</div>
+
+<p>This would produce output similar to:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>id value: f8dd67dc-2301-487a-85ab-c4b573acad2d
+id value: 3
+</code></pre>
+</div>
+
+<p>In the first case, the <code class="highlighter-rouge">id</code> value is an automatically generated UUID; in the second, it was supplied with Bob’s message.</p>
+
+<p>When <code class="highlighter-rouge">subscribe</code> is chained off <a href="#watch">watch</a>, it takes two callback functions:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">changefeed(result)</code>: a callback that receives a changefeed result document</li>
+  <li><code class="highlighter-rouge">error(error)</code>: a callback that receives error information if an error occurs</li>
+</ul>
+
+<p>Read the documentation for <code class="highlighter-rouge">watch</code> for more details on returned changefeed dowcuments.</p>
+
+<h2 id="watch">Collection.watch</h2>
+
+<p>Convert a query into a <a href="https://rethinkdb.com/docs/changefeeds/javascript/">changefeed</a>. This returns a <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html">RxJS Observable</a> containing the query result set.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">watch</span><span class="p">({</span><span class="nx">options</span><span class="p">})</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">watch</code> command takes one option, <code class="highlighter-rouge">rawChanges</code>. If set <code class="highlighter-rouge">true</code>, your application will receive the actual change documents from the RethinkDB changefeed, rather than having Horizon update the result set for you based on the change documents. (Read the RethinkDB <a href="https://rethinkdb.com/docs/changefeeds/javascript/">changefeed documentation</a> for more details on change documents.)</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+
+<span class="c1">// get a handle to the channels table in a multi channel chat application</span>
+<span class="kr">const</span> <span class="nx">channels</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s2">"channels"</span><span class="p">);</span>
+
+<span class="c1">// receive all active channels, listing them every time a channel is</span>
+<span class="c1">// added, deleted or changed</span>
+<span class="nx">channels</span><span class="p">.</span><span class="nx">watch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">allChannels</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Channels: '</span><span class="p">,</span> <span class="nx">allChannels</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>That will return output such as this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Channels: []
+Channels: [{id: 1, name: 'everyone'}]
+Channels: [{id: 1, name: 'everyone'}, {id: 2, name: 'rethinkdb'}]
+Channels: [{id: 1, name: 'general'}, {id: 2, name: 'rethinkdb'}]
+</code></pre>
+</div>
+
+<p>To get raw change documents:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">channels</span><span class="p">.</span><span class="nx">watch</span><span class="p">({</span><span class="na">rawChanges</span><span class="p">:</span> <span class="kc">true</span><span class="p">}).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">allChannels</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Change: '</span><span class="p">,</span> <span class="nx">allChannels</span><span class="p">)</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>The changes in the example above would produce these raw changes:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Change: {type: 'state', state: 'synced'}
+Change: {type: 'add', new_val: {id: 1, name: 'everyone'}, old_val: null}
+Change: {type: 'add', new_val: {id: 2, name: 'rethinkdb'}, old_val: null}
+Change: {type: 'change', new_val: {id: 1, name: 'general'},
+         old_val: {id: 1, name: 'everyone'}}
+</code></pre>
+</div>
+
+<p>You can also use <code class="highlighter-rouge">watch</code> to turn more complex Horizon queries into changefeeds.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// only watch channels with 10 or more active users</span>
+<span class="nx">channels</span><span class="p">.</span><span class="nx">above</span><span class="p">({</span><span class="na">users</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span> <span class="s2">"closed"</span><span class="p">).</span><span class="nx">watch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">allChannels</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Popular channels: '</span><span class="p">,</span> <span class="nx">allChannels</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// maintain an updating "top 10" channel list</span>
+<span class="nx">channels</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"users"</span><span class="p">,</span> <span class="s2">"descending"</span><span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="nx">watch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">allChannels</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Popular channels: '</span><span class="p">,</span> <span class="nx">allChannels</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<h2 id="above">Collection.above</h2>
+
+<p>Restrict the range of results returned to values that sort above a given value.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">above</span><span class="p">(</span><span class="nx">id</span> <span class="o">|</span> <span class="nx">object</span><span class="p">[,</span> <span class="s2">"closed"</span> <span class="o">|</span> <span class="s2">"open"</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">above</code> method may be called with either a key-value pair to match against (e.g., <code class="highlighter-rouge"><span class="p">{</span><span class="err">name:</span><span class="w"> </span><span class="nt">"agatha"</span><span class="err">}</span></code> or an <code class="highlighter-rouge">id</code> value to look up. The second optional parameter must be the string <code class="highlighter-rouge">"closed"</code> or <code class="highlighter-rouge">"open"</code>, indicating that the specified value will be included (closed) or excluded (open) from the result set. The default is excluded (open): <code class="highlighter-rouge">above(10)</code> will return documents with <code class="highlighter-rouge">id</code> values higher than (but not equal to) 10.</p>
+
+<p>Values in key-value pairs may be numbers, strings, or even arrays or objects; non-numeric values will be sorted lexicographically, and strings are sorted by UTF-8 codepoint. (Read about <a href="https://rethinkdb.com/docs/data-types/#sorting-order">Sorting order</a> and <a href="https://rethinkdb.com/docs/data-types/">ReQL data types</a> in general.)</p>
+
+<p>The <code class="highlighter-rouge">above</code> method is often used in conjunction with <a href="#order">order</a>, but it may appear after any Horizon method with the exception of <a href="#find">find</a> and <a href="#limit">limit</a>. (However, <code class="highlighter-rouge">limit</code> may appear after <code class="highlighter-rouge">above</code>.)</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">);</span>
+
+<span class="c1">// get all messages with an ID over 100, sorted</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"id"</span><span class="p">).</span><span class="nx">above</span><span class="p">({</span><span class="na">id</span><span class="p">:</span> <span class="mi">100</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">();</span>
+
+<span class="c1">// the same as above, but using the shorthand for fetching by document ID</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"id"</span><span class="p">).</span><span class="nx">above</span><span class="p">(</span><span class="mi">100</span><span class="p">).</span><span class="nx">fetch</span><span class="p">();</span>
+
+<span class="c1">// get all messages with an ID between 101 and 200, sorted</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"id"</span><span class="p">).</span><span class="nx">below</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">above</span><span class="p">(</span><span class="mi">100</span><span class="p">).</span><span class="nx">fetch</span><span class="p">();</span>
+
+<span class="c1">// get all users with a reputation score of 50 or over, unsorted</span>
+<span class="nx">users</span><span class="p">.</span><span class="nx">above</span><span class="p">({</span><span class="na">reputation</span><span class="p">:</span> <span class="mi">50</span><span class="p">},</span> <span class="s2">"closed"</span><span class="p">).</span><span class="nx">fetch</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<h2 id="below">Collection.below</h2>
+
+<p>Restrict the range of results returned to values that sort below a given value.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">below</span><span class="p">(</span><span class="nx">id</span> <span class="o">|</span> <span class="nx">object</span><span class="p">[,</span> <span class="s2">"closed"</span> <span class="o">|</span> <span class="s2">"open"</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">below</code> method may be called with either a key-value pair to match against (e.g., <code class="highlighter-rouge"><span class="p">{</span><span class="err">name:</span><span class="w"> </span><span class="nt">"agatha"</span><span class="err">}</span></code> or an <code class="highlighter-rouge">id</code> value to look up. The second optional parameter must be the string <code class="highlighter-rouge">"closed"</code> or <code class="highlighter-rouge">"open"</code>, indicating that the specified value will be included (closed) or excluded (open) from the result set. The default is excluded (open): <code class="highlighter-rouge">below(10)</code> will return documents with <code class="highlighter-rouge">id</code> values lower than (but not equal to) 10.</p>
+
+<p>Values in key-value pairs may be numbers, strings, or even arrays or objects; non-numeric values will be sorted lexicographically, and strings are sorted by UTF-8 codepoint. (Read about <a href="https://rethinkdb.com/docs/data-types/#sorting-order">Sorting order</a> and <a href="https://rethinkdb.com/docs/data-types/">ReQL data types</a> in general.)</p>
+
+<p>The <code class="highlighter-rouge">below</code> method may <em>only</em> be used after <a href="#order">order</a>, although other methods may be used after it.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">);</span>
+
+<span class="c1">// get all messages with an ID below 100, sorted</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"id"</span><span class="p">).</span><span class="nx">below</span><span class="p">({</span><span class="na">id</span><span class="p">:</span> <span class="mi">100</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">();</span>
+
+<span class="c1">// the same as above, but using the shorthand for fetching by document ID</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"id"</span><span class="p">).</span><span class="nx">below</span><span class="p">(</span><span class="mi">100</span><span class="p">).</span><span class="nx">fetch</span><span class="p">();</span>
+
+<span class="c1">// get all messages with an ID between 101 and 200, sorted</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"id"</span><span class="p">).</span><span class="nx">below</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">above</span><span class="p">(</span><span class="mi">100</span><span class="p">).</span><span class="nx">fetch</span><span class="p">();</span>
+
+<span class="c1">// get all users with a reputation score of 50 or below, sorted</span>
+<span class="nx">users</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"reputation"</span><span class="p">).</span><span class="nx">below</span><span class="p">({</span><span class="na">reputation</span><span class="p">:</span> <span class="mi">50</span><span class="p">},</span> <span class="s2">"closed"</span><span class="p">).</span><span class="nx">fetch</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<h2 id="find">Collection.find</h2>
+
+<p>Retrieve a single document from a Collection.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">id</span> <span class="o">|</span> <span class="nx">object</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">find</code> method may be called with either a key-value pair to match against (e.g., <code class="highlighter-rouge"><span class="p">{</span><span class="err">name:</span><span class="w"> </span><span class="nt">"agatha"</span><span class="err">}</span></code> or an <code class="highlighter-rouge">id</code> value to look up.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">);</span>
+
+<span class="c1">// get the first message from Bob</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="na">from</span><span class="p">:</span> <span class="s2">"bob"</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">();</span>
+
+<span class="c1">// get the message with ID 101</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="na">id</span><span class="p">:</span> <span class="mi">101</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">();</span>
+
+<span class="c1">// because we are fetching by the document ID, we can use a shorthand</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="mi">101</span><span class="p">).</span><span class="nx">fetch</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<p>If no matching document exists, no result will be returned and no error will thrown. To explicitly check for this condition, use RxJS’s <a href="http://reactivex.io/documentation/operators/defaultifempty.html">defaultIfEmpty</a> operator.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">messages</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">id</span><span class="p">).</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">defaultIfEmpty</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span>
+    <span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">msg</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Message not found'</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">);</span>
+</code></pre>
+</div>
+
+<h2 id="findall">Collection.findAll</h2>
+
+<p>Retrieve multiple documents from a Collection.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">findAll</span><span class="p">(</span><span class="nx">object</span><span class="p">[,</span> <span class="nx">object</span><span class="p">,</span> <span class="p">...])</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">findAll</code> method can be called with one or more key-value pairs to match against (e.g., <code class="highlighter-rouge"><span class="p">{</span><span class="err">email:</span><span class="w"> </span><span class="nt">"bob@example.com"</span><span class="err">}</span></code>. Every document that matches the pairs will be returned in a list. (If no documents match, an empty list, <code class="highlighter-rouge">[]</code>, will be returned.)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>const hz = new Horizon();
+const messages = hz("messages");
+
+// get all messages from Bob, Agatha and Dave
+var messageList = messages.findAll({from: "bob"}, {from: "agatha"}, {from: "dave"}).fetch();
+
+// get all messages from Jane and all messages with a high priority
+var messageList = messages.findAll({from: "jane"}, {priority: "high"}).fetch();
+</code></pre>
+</div>
+
+<h2 id="limit">Collection.limit</h2>
+
+<p>Limit the results of the query to a maximum number of returned documents.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">limit</span><span class="p">(</span><span class="nx">integer</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">limit</code> command takes a single argument, an integer representing the number of items to limit the results to.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">users</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s2">"users"</span><span class="p">);</span>
+
+<span class="c1">// get the 10 most prolific posters</span>
+<span class="nx">users</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"postCount"</span><span class="p">,</span> <span class="s2">"descending"</span><span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="nx">fetch</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<h2 id="order">Collection.order</h2>
+
+<p>Sort the results of the query by the values of a given field.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="nx">field</span><span class="p">[,</span> <span class="nx">direction</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<p>Fields passed to <code class="highlighter-rouge">order</code> may contain numbers, strings, or even arrays or objects; non-numeric values will be sorted lexicographically, and strings are sorted by UTF-8 codepoint. (Read about <a href="https://rethinkdb.com/docs/data-types/#sorting-order">Sorting order</a> and <a href="https://rethinkdb.com/docs/data-types/">ReQL data types</a> in general.)</p>
+
+<p>The optional second argument must be a string indication sort direction, either <code class="highlighter-rouge">"ascending"</code> or <code class="highlighter-rouge">"descending"</code>. The default is <code class="highlighter-rouge">"ascending"</code>.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">);</span>
+
+<span class="c1">// get all messages, ordered ascending by ID value</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"id"</span><span class="p">,</span> <span class="s2">"ascending"</span><span class="p">).</span><span class="nx">fetch</span><span class="p">();</span>
+
+<span class="c1">// "ascending" is the default, so it can be left out</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"id"</span><span class="p">);</span>
+
+<span class="c1">// get all messages ordered by time, most recent first</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="s2">"time"</span><span class="p">,</span> <span class="s2">"descending"</span><span class="p">).</span><span class="nx">fetch</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<h2 id="remove">Collection.remove</h2>
+
+<p>Delete a single document from a Collection.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">id</span> <span class="o">|</span> <span class="nx">object</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">remove</code> method may be called with either an object to be deleted or an <code class="highlighter-rouge">id</code> value. In the object case, the object must include an <code class="highlighter-rouge">id</code> key.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">);</span>
+
+<span class="c1">// get the message with an ID of 101</span>
+<span class="kd">var</span> <span class="nx">messageObject</span><span class="p">;</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="mi">101</span><span class="p">).</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span>
+    <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="nx">messageObject</span> <span class="o">=</span> <span class="nx">result</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="c1">// delete that object</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="nx">messageObject</span><span class="p">);</span>
+
+<span class="c1">// it may also be deleted by passing an object just with an ID key</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">remove</span><span class="p">({</span><span class="na">id</span><span class="p">:</span> <span class="mi">101</span><span class="p">});</span>
+
+<span class="c1">// because we are deleting based on the document ID, we can use a shorthand</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="mi">101</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h2 id="removeall">Collection.removeAll</h2>
+
+<p>Delete multiple documents from a Collection.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">removeAll</span><span class="p">([</span><span class="nx">id</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="p">...]</span> <span class="o">|</span> <span class="p">[</span><span class="nx">object</span><span class="p">,</span> <span class="nx">object</span><span class="p">,</span> <span class="p">...])</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">removeAll</code> method must be called with an array of objects to be deleted, or <code class="highlighter-rouge">id</code> values to remove. The objects must have <code class="highlighter-rouge">id</code> keys. You can mix <code class="highlighter-rouge">id</code> values and objects within the array.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">);</span>
+
+<span class="c1">// delete messages with the IDs 101, 103 and 109</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">removeAll</span><span class="p">([</span><span class="mi">101</span><span class="p">,</span> <span class="mi">103</span><span class="p">,</span> <span class="mi">109</span><span class="p">]);</span>
+
+<span class="c1">// find and delete all messages from Bob and Agatha</span>
+<span class="c1">// this example uses RxJS's "map" command to execute the removeAll and return</span>
+<span class="c1">// another observable to pass to subscribe for reporting purposes</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">findAll</span><span class="p">({</span><span class="na">from</span><span class="p">:</span> <span class="s1">'bob'</span><span class="p">},</span> <span class="p">{</span><span class="na">from</span><span class="p">:</span> <span class="s1">'agatha'</span><span class="p">}).</span><span class="nx">fetch</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">mergeMap</span><span class="p">(</span><span class="nx">messageList</span> <span class="o">=&gt;</span> <span class="nx">messages</span><span class="p">.</span><span class="nx">removeAll</span><span class="p">(</span><span class="nx">messageList</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">subscribe</span><span class="p">({</span>
+        <span class="nx">next</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span>   <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="err">`</span><span class="nx">id</span> <span class="nx">$</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span> <span class="nx">was</span> <span class="nx">removed</span><span class="err">`</span><span class="p">)</span> <span class="p">},</span>
+        <span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="err">`</span><span class="nb">Error</span><span class="err">:</span> <span class="nx">$</span><span class="p">{</span><span class="nx">err</span><span class="p">}</span><span class="err">`</span><span class="p">)</span> <span class="p">},</span>
+        <span class="nx">complete</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'All items removed successfully'</span><span class="p">)</span> <span class="p">}</span>
+    <span class="p">});</span>
+</code></pre>
+</div>
+
+<h2 id="insert">Collection.insert</h2>
+
+<p>Insert one or more new documents into a Collection.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="nx">object</span> <span class="o">|</span> <span class="nx">list</span> <span class="nx">of</span> <span class="nx">objects</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">insert</code> method can be called either with an object representing a single document, or a list of objects. The objects must have unique <code class="highlighter-rouge">id</code> values, and must have <code class="highlighter-rouge">id</code> values that do not already exist in the collection or an error will be raised.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">);</span>
+
+<span class="c1">// Insert a single document. There must not be a document with an id of 1 in</span>
+<span class="c1">// the messages collection.</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">insert</span><span class="p">({</span>
+    <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="na">from</span><span class="p">:</span> <span class="s2">"bob"</span><span class="p">,</span>
+    <span class="na">text</span><span class="p">:</span> <span class="s2">"Hello from RethinkDB"</span>
+<span class="p">});</span>
+
+<span class="c1">// Insert multiple documents at once. All documents must be new.</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">insert</span><span class="p">([</span>
+    <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="na">from</span><span class="p">:</span> <span class="s2">"agatha"</span><span class="p">,</span>
+        <span class="na">text</span><span class="p">:</span> <span class="s2">"Meet at Smugglers' Cove on Saturday"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="na">from</span><span class="p">:</span> <span class="s2">"bob"</span><span class="p">,</span>
+        <span class="na">text</span><span class="p">:</span> <span class="s2">"Would Superman lose a fight against Wonder Woman?"</span>
+    <span class="p">}</span>
+<span class="p">]);</span>
+</code></pre>
+</div>
+
+<h2 id="replace">Collection.replace</h2>
+
+<p>Replace one or more existing documents within a Collection.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">object</span> <span class="o">|</span> <span class="nx">list</span> <span class="nx">of</span> <span class="nx">objects</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>This is similar to <code class="highlighter-rouge">insert</code>, but instead of requiring documents to have new <code class="highlighter-rouge">id</code> values, <code class="highlighter-rouge">replace</code> requires documents to have <em>existing</em> <code class="highlighter-rouge">id</code> values in the Collection. If you try to insert new documents with <code class="highlighter-rouge">replace</code>, an error will be raised.</p>
+
+<h2 id="store">Collection.store</h2>
+
+<p>Insert one or more documents into a Collection, replacing existing ones or inserting new ones based on <code class="highlighter-rouge">id</code> value.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">store</span><span class="p">(</span><span class="nx">object</span> <span class="o">|</span> <span class="nx">list</span> <span class="nx">of</span> <span class="nx">objects</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">store</code> method is a combination of <code class="highlighter-rouge">insert</code> and <code class="highlighter-rouge">replace</code>:</p>
+
+<ul>
+  <li>If the <code class="highlighter-rouge">id</code> value of a document does not exist in the Collection, <code class="highlighter-rouge">store</code> acts as <code class="highlighter-rouge">insert</code>;</li>
+  <li>If the <code class="highlighter-rouge">id</code> value of a document <em>does</em> exist in the Collection, <code class="highlighter-rouge">store</code> acts as <code class="highlighter-rouge">replace</code>.</li>
+</ul>
+
+<h2 id="update">Collection.update</h2>
+
+<p>Modify one or more existing documents within a Collection.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">object</span> <span class="o">|</span> <span class="nx">list</span> <span class="nx">of</span> <span class="nx">objects</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">update</code> method can be called either with an object representing a single document, or a list of objects. The objects must have <code class="highlighter-rouge">id</code> values that already exist in the collection or an error will be raised. This functions similarly to <code class="highlighter-rouge">replace</code>, but the <code class="highlighter-rouge">update</code> command will only change the specified fields in documents it affects; unspecified fields will be left untouched. (This is similar to a ReQL <a href="http://rethinkdb.com/api/javascript/merge/">merge</a> operation.)</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s2">"messages"</span><span class="p">);</span>
+
+<span class="c1">// Update a single document. This will raise an error if there is not an</span>
+<span class="c1">// existing document in the messages collection with an id value of 1.</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">update</span><span class="p">({</span>
+    <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="na">from</span><span class="p">:</span> <span class="s2">"bob"</span><span class="p">,</span>
+    <span class="na">text</span><span class="p">:</span> <span class="s2">"Hello from RethinkDB"</span>
+<span class="p">});</span>
+
+<span class="c1">// Update multiple documents at once. All documents must already exist.</span>
+<span class="c1">// Fields that are not specified in the update command will be left</span>
+<span class="c1">// unmodified.</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">update</span><span class="p">([</span>
+    <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="na">text</span><span class="p">:</span> <span class="s2">"Meet at Smugglers' Cove on Saturday"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="na">text</span><span class="p">:</span> <span class="s2">"Would Superman lose in a fight against Wonder Woman?"</span>
+    <span class="p">}</span>
+<span class="p">]);</span>
+</code></pre>
+</div>
+
+<h2 id="upsert">Collection.upsert</h2>
+
+<p>Update one or more documents in a Collection, modifying existing ones or inserting new ones based on <code class="highlighter-rouge">id</code> value.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Collection</span><span class="p">.</span><span class="nx">upsert</span><span class="p">(</span><span class="nx">object</span> <span class="o">|</span> <span class="nx">list</span> <span class="nx">of</span> <span class="nx">objects</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">upsert</code> method is a combination of <code class="highlighter-rouge">insert</code> and <code class="highlighter-rouge">update</code>:</p>
+
+<ul>
+  <li>If the <code class="highlighter-rouge">id</code> value of a document does not exist in the Collection, <code class="highlighter-rouge">upsert</code> acts as <code class="highlighter-rouge">insert</code>;</li>
+  <li>If the <code class="highlighter-rouge">id</code> value of a document <em>does</em> exist in the Collection, <code class="highlighter-rouge">upsert</code> acts as <code class="highlighter-rouge">update</code>.</li>
+</ul>
+
+<h2 id="aggregates-and-models">Aggregates and models</h2>
+
+<p>Queries on multiple Horizon Collections can be combined using the <a href="/api/horizon/#aggregate">Horizon.aggregate()</a> method, and aggregates can be turned into parameterized templates using the <a href="/api/horizon/#model">Horizon.model()</a> method. Read their documentation for details.</p>
+
+<h2 id="rxjs-observable-methods-and-operators">RxJS Observable methods and operators</h2>
+
+<p>The <code class="highlighter-rouge">fetch</code> and <code class="highlighter-rouge">watch</code> methods return <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html">RxJS Observables</a>, and make all of the <code class="highlighter-rouge">Observable</code> methods available.</p>
+
+
+        </section>
+    </div>
+</section>
+
+        </section>
+        <footer>
+            <div class="site-container">
+                <section class="about">
+                    <h1 class="hz">Horizon is a <strong>realtime, open-source backend</strong> for JavaScript apps.</h1>
+                    <a href="https://github.com/rethinkdb/horizon" class="button primary-button">Star the project on GitHub</a>
+                </section>
+                <section class="footer-right">
+                    <nav class="site-map">
+                        <section>
+                            <h1>Getting started</h1>
+                            <ul>
+                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="/install">Install</a></li>
+                                <li><a href="/docs/getting-started">Getting started</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Documentation</h1>
+                            <ul>
+                                <li><a href="/api/collection">Collection API</li>
+                                <li><a href="/api/horizon">Horizon API</a></li>
+                                <li><a href="/docs/cli">Horizon CLI</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Get involved</h1>
+                            <ul>
+                                <li><a href="http://slack.rethinkdb.com">Join us on Slack #horizon</a></li>
+                                <li><a href="https://discuss.horizon.io">Discuss on Discourse</a></li>
+                                <li><a href="https://rethinkdb.com/community/shirts-for-stories/">Shirts for Stories</a></li>
+                            </ul>
+                        </section>
+                    </nav>
+                    <h1 class="github">Built by the <a href="https://rethinkdb.com">RethinkDB team</a> and an amazing community.</h2>
+                </section>
+            </div>
+        </footer>
+        <script type="text/javascript">
+          var _gauges = _gauges || [];
+          (function() {
+            var t   = document.createElement('script');
+            t.type  = 'text/javascript';
+            t.async = true;
+            t.id    = 'gauges-tracker';
+            t.setAttribute('data-site-id', '56fb1a594b2ffa61f100a699');
+            t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+            t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(t, s);
+          })();
+        </script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-9922584-3', 'auto');
+          ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

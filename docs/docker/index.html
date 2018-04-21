@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Using Horizon with Docker</title>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/github.css">
+
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="shortcut icon" href="/favicon/favicon.ico">
+
+        <!-- fonts.com -->
+        <script type="text/javascript">
+            // first, create the object that contains
+            // configuration variables
+            MTIConfig = {};
+
+            // next, add a variable that will control
+            // whether or not FOUT will be prevented
+            MTIConfig.EnableCustomFOUTHandler = false // true = prevent FOUT
+        </script>
+        <script type="text/javascript" src="//fast.fonts.net/jsapi/5cf5064a-b80d-4123-82d3-5c7a863edb22.js"></script>
+        <!-- jquery -->
+        <script type="text/javascript" src="/js/jquery/jquery-2.2.3.min.js"></script>
+        <!-- waypoints -->
+        <script type="text/javascript" src="/js/waypoints/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="/js/waypoints/sticky.min.js"></script>
+        <!-- horizon.io -->
+        <script type="text/javascript" src="/js/site.js"></script>
+    </head>
+    <body>
+        
+
+        <nav class="site-nav">
+            <div class="site-container">
+                <a class="logo" href="/"><img src="/images/horizon-logo.png" alt="Horizon"></a>
+                <ul class="navbar-links">
+                    <li class="menu-trigger">
+                        <svg height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="miu" stroke="none" stroke-width="1"><g id="Artboard-1" transform="translate(-395.000000, -479.000000)"><g id="slice" transform="translate(215.000000, 119.000000)"/><path d="M396.500836,485 C396.224232,485 396,485.214035 396,485.504684 L396,486.495316 C396,486.774045 396.217742,487 396.500836,487 L417.499164,487 C417.775768,487 418,486.785965 418,486.495316 L418,485.504684 C418,485.225955 417.782258,485 417.499164,485 L396.500836,485 Z M396.500836,490 C396.224232,490 396,490.214035 396,490.504684 L396,491.495316 C396,491.774045 396.217742,492 396.500836,492 L417.499164,492 C417.775768,492 418,491.785965 418,491.495316 L418,490.504684 C418,490.225955 417.782258,490 417.499164,490 L396.500836,490 Z M396.500836,495 C396.224232,495 396,495.214035 396,495.504684 L396,496.495316 C396,496.774045 396.217742,497 396.500836,497 L417.499164,497 C417.775768,497 418,496.785965 418,496.495316 L418,495.504684 C418,495.225955 417.782258,495 417.499164,495 L396.500836,495 Z" id="editor-list-view-hambuger-menu-glyph"/></g></g></svg>
+
+                    </li>
+                    <li>
+                        <a href="/cloud">Horizon Cloud</a>
+                    </li>
+                    <li>
+                        <a href="/install">Install</a>
+                    </li>
+                    <li>
+                        <a href="/faq">FAQ</a>
+                    </li>
+                    <li class="active">
+                        <a href="/docs">Docs</a>
+                    </li>
+                    <li>
+                        <a href="/community">Community</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="site-content">
+            <section class="documentation">
+    <div class="site-container">
+        <nav class="docs-nav">
+            
+            <section>
+                <h1>Horizon basics</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- index | docker -->
+                            <a href="/docs">Overview</a>
+                        </li>
+                    
+                        <li>
+                            <!-- install | docker -->
+                            <a href="/install">Install Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- faq | docker -->
+                            <a href="/faq">FAQ</a>
+                        </li>
+                    
+                        <li>
+                            <!-- getting-started | docker -->
+                            <a href="/docs/getting-started">Getting started</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+            <section>
+                <h1>Building Horizon apps</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- cli | docker -->
+                            <a href="/docs/cli">Horizon CLI</a>
+                        </li>
+                    
+                        <li>
+                            <!-- auth | docker -->
+                            <a href="/docs/auth">Authentication</a>
+                        </li>
+                    
+                        <li>
+                            <!-- users | docker -->
+                            <a href="/docs/users">Users and groups</a>
+                        </li>
+                    
+                        <li>
+                            <!-- permissions | docker -->
+                            <a href="/docs/permissions">Permissions</a>
+                        </li>
+                    
+                        <li>
+                            <!-- api-collection | docker -->
+                            <a href="/api/collection">Collection API</a>
+                        </li>
+                    
+                        <li>
+                            <!-- api-horizon | docker -->
+                            <a href="/api/horizon">Horizon API</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+            <section>
+                <h1>Resources</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- config | docker -->
+                            <a href="/docs/configuration">Configuring Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- embed | docker -->
+                            <a href="/docs/embed">Embedding Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- examples | docker -->
+                            <a href="/docs/examples">Example apps</a>
+                        </li>
+                    
+                        <li>
+                            <!-- limitations | docker -->
+                            <a href="/docs/limitations">Limitations</a>
+                        </li>
+                    
+                        <li class="active">
+                            <!-- docker | docker -->
+                            <a href="/docs/docker">Horizon with Docker</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+        </nav>
+        <section class="docs-article document">
+            
+            <h1 class="title">Using Horizon with Docker</h1>
+            <p>It’s quick and easy to get Horizon up and running with Docker! The only dependencies are current versions of <code class="highlighter-rouge">node</code> and <code class="highlighter-rouge">npm</code>.</p>
+
+<h2 id="our-docker-images">Our Docker images</h2>
+
+<p>We provide an automatically built <a href="https://hub.docker.com/r/rethinkdb/horizon/">horizon</a> image on Docker Hub. Currently we support both a <code class="highlighter-rouge">latest</code> and <code class="highlighter-rouge">next</code> tag. <code class="highlighter-rouge">next</code> is what is currently in our <a href="https://github.com/rethinkdb/horizon"><code class="highlighter-rouge">next</code> branch</a> on rethinkdb/horizon on Github and <code class="highlighter-rouge">latest</code> is our last stable release.</p>
+
+<p>The container has the following requirements:</p>
+
+<ul>
+  <li>Your Horizon application should be mounted at <code class="highlighter-rouge">/usr/app</code> within your container.</li>
+  <li>The <code class="highlighter-rouge">RETHINKDB_URI</code> environment variable should be specified with the <code class="highlighter-rouge">-e</code> to <code class="highlighter-rouge">docker run</code>, specifying the host and port of an instance of RethinkDB visible to the container.</li>
+</ul>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docker run -e RETHINKDB_URI=EXAMPLE_HOST:28015 -v ./:/usr/app rethinkdb/horizon
+</code></pre>
+</div>
+
+<p>The container makes no other assumptions about your deployment configuration. To set other Horizon configuration options, you can set <code class="highlighter-rouge">HZ_*</code> environment variables, as described in <a href="/docs/configuration">the config.toml file</a>. (All the configuration variables that can normally be specified in <code class="highlighter-rouge">.hz/config.toml</code> can be overridden with environment variables.)</p>
+
+<h2 id="using-docker-compose">Using Docker Compose</h2>
+
+<p>Using Docker Compose is the quickest way to getting started with Horizon. Installing RethinkDB on your host system isn’t even required when using the RethinkDB Docker image.</p>
+
+<p>Copy the <a href="https://github.com/rethinkdb/horizon/blob/next/docker-compose.dev.yml">development Docker Compose file</a> from the Horizon Github repo to the root of your Horizon application, then run:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>docker-compose up
+</code></pre>
+</div>
+
+<p>Now your Horizon application is being served on <a href="http://localhost:8181">localhost:8181</a>, and any changes you make will appear on page reload.</p>
+
+<h2 id="a-basic-production-deployment-with-docker">A basic production deployment with Docker</h2>
+
+<p>Once you have your Horizon app ready, it’s very easy to get it deployed with Docker Compose. With the following setup, we are going to:</p>
+
+<ol>
+  <li>Install Docker</li>
+  <li>Install Let’s Encrypt and create certificates</li>
+  <li>Get your application to your server</li>
+  <li>Modify a <code class="highlighter-rouge">docker-compose.yml</code></li>
+  <li>Deploy</li>
+</ol>
+
+<h3 id="installing-docker">Installing Docker</h3>
+
+<p>The easiest way to install Docker is to use Digital Ocean’s <a href="https://www.digitalocean.com/features/one-click-apps/docker/">Docker one-click deploy image</a>. Otherwise, you can follow the instructions to install Docker on Ubuntu <a href="https://docs.docker.com/engine/installation/linux/ubuntulinux/">on Docker’s web site</a>.</p>
+
+<h3 id="setting-up-lets-encrypt">Setting up Let’s Encrypt</h3>
+
+<p>In order to serve your app securely, we are going to use certificates provided by <a href="https://letsencrypt.org/">Let’s Encrypt</a>. This is a wonderful service which provides free signed certificates for your domain, ensuring that anyone who connects to your application does so securely and privately. For the purposes of this example, we’ll assume your public server is running Ubuntu 14.04 or greater.</p>
+
+<p>In order for this to work, you need to make sure that your DNS settings are properly configured so your domain points to your server. This largely depends on which registrar you are using, so if you need help feel free to <a href="http://slack.rethinkdb.com">ask us in Slack</a>. You can also find <a href="https://certbot.eff.org/#ubuntuxenial-other">additional instructions online here</a> via the EFF’s website.</p>
+
+<p>First, SSH into your server and install Let’s Encrypt.</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>sudo apt-get install letsencrypt
+</code></pre>
+</div>
+
+<p>After successfully installing, start Let’s Encrypt:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>letsencrypt certonly
+</code></pre>
+</div>
+
+<p><strong>Note:</strong> if you have anything currently running on port 80, it will block the Let’s Encrypt process!</p>
+
+<p>This will take you through the guided configuration, and the Let’s Encrypt service will verify that you own the server and domain that is pointing to it via the CNAME DNS record.</p>
+
+<p>Once this is complete, the certificates your Horizon app needs will be created in the <code class="highlighter-rouge">/etc/letsencrypt/live</code> directory.</p>
+
+<h3 id="getting-your-application-to-the-server">Getting your application to the server</h3>
+
+<p>To install your application onto your server, either <code class="highlighter-rouge">rsync</code> them to your server manually, or push your application repo to a <strong>private</strong> git repository online and clone the repo to your server. The private part is important if you have <em>any</em> secrets within your <code class="highlighter-rouge">.hz/config.toml</code> file, including OAuth secrets!</p>
+
+<p>Then, you’ll need to modify the Docker compose configuration file for your setup. Make a copy of the <a href="https://github.com/rethinkdb/horizon/blob/next/docker-compose.prod.yml"><code class="highlighter-rouge">docker-compose.prod.yml</code></a> file, rename it to <code class="highlighter-rouge">docker-compose.yml</code>, and put it into the root of your application directory (at the same level as the <code class="highlighter-rouge">.hz</code> folder).</p>
+
+<p>Add the following under the <code class="highlighter-rouge">horizon</code> portion of the <code class="highlighter-rouge">docker-compose.yml</code> file. We need to mount the certificates from Let’s Encrypt into the container, and tell Horizon where they are. Make sure to replace <code class="highlighter-rouge">your.domain.com</code> with the domain you setup with Let’s Encrypt.</p>
+
+<div class="language-yml highlighter-rouge"><pre class="highlight"><code><span class="s">horizon</span><span class="pi">:</span>
+  <span class="s">image</span><span class="pi">:</span> <span class="s">rethinkdb/horizon</span>
+  <span class="s">command</span><span class="pi">:</span> <span class="s">su -s /bin/sh horizon -c "hz serve --connect rethinkdb:28015 --bind all /usr/app"</span>
+  <span class="s">environment</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">HZ_KEY_FILE=/letsencrypt/live/your.domain.com/privkey.pem</span>
+    <span class="pi">-</span> <span class="s">HZ_CERT_FILE=/letsencrypt/live/your.domain.com/fullchain.pem</span>
+    <span class="pi">-</span> <span class="s">HZ_SECURE=yes</span>
+  <span class="s">volumes</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">./:/usr/app</span>
+    <span class="pi">-</span> <span class="s">/etc/letsencrypt:/letsencrypt</span>
+  <span class="s">links</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">rethinkdb</span>
+  <span class="s">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s2">"</span><span class="s">8181:80"</span>
+</code></pre>
+</div>
+
+<p>Instead of adding environment variables, you could modify the <code class="highlighter-rouge">command</code> property to add the equivalent <code class="highlighter-rouge">hz serve</code> flags. We think using the variables keeps the file more readable.</p>
+
+<h3 id="starting-it-up">Starting it up</h3>
+
+<p>You can now run <code class="highlighter-rouge">docker-compose up</code>, and after downloading the <code class="highlighter-rouge">rethinkdb</code> and <code class="highlighter-rouge">rethinkdb/horizon</code> Docker images, your application should now be running and secured with TLS (look for the green lock next to the URL in your browser). You can daemonize this setup by adding <code class="highlighter-rouge">-d</code> like so - <code class="highlighter-rouge">docker-compose up -d</code>.</p>
+
+<p>You can also add <code class="highlighter-rouge">restart: always</code> to both the Horizon and RethinkDB configuration in <code class="highlighter-rouge">docker-compose.yml</code> to allow Docker to restart these containers in case of a crash.</p>
+
+        </section>
+    </div>
+</section>
+
+        </section>
+        <footer>
+            <div class="site-container">
+                <section class="about">
+                    <h1 class="hz">Horizon is a <strong>realtime, open-source backend</strong> for JavaScript apps.</h1>
+                    <a href="https://github.com/rethinkdb/horizon" class="button primary-button">Star the project on GitHub</a>
+                </section>
+                <section class="footer-right">
+                    <nav class="site-map">
+                        <section>
+                            <h1>Getting started</h1>
+                            <ul>
+                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="/install">Install</a></li>
+                                <li><a href="/docs/getting-started">Getting started</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Documentation</h1>
+                            <ul>
+                                <li><a href="/api/collection">Collection API</li>
+                                <li><a href="/api/horizon">Horizon API</a></li>
+                                <li><a href="/docs/cli">Horizon CLI</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Get involved</h1>
+                            <ul>
+                                <li><a href="http://slack.rethinkdb.com">Join us on Slack #horizon</a></li>
+                                <li><a href="https://discuss.horizon.io">Discuss on Discourse</a></li>
+                                <li><a href="https://rethinkdb.com/community/shirts-for-stories/">Shirts for Stories</a></li>
+                            </ul>
+                        </section>
+                    </nav>
+                    <h1 class="github">Built by the <a href="https://rethinkdb.com">RethinkDB team</a> and an amazing community.</h2>
+                </section>
+            </div>
+        </footer>
+        <script type="text/javascript">
+          var _gauges = _gauges || [];
+          (function() {
+            var t   = document.createElement('script');
+            t.type  = 'text/javascript';
+            t.async = true;
+            t.id    = 'gauges-tracker';
+            t.setAttribute('data-site-id', '56fb1a594b2ffa61f100a699');
+            t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+            t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(t, s);
+          })();
+        </script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-9922584-3', 'auto');
+          ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

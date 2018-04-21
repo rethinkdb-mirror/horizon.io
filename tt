@@ -1,0 +1,10 @@
+sed -i 's,/web/.*/http://horizon.io:80/,/,g' index.html
+sed -i 's,/web/.*js_/http://horizon.io:80/js/,/js/,g' index.html
+sed -i 's,/web/.*im_/http://horizon.io:80/images/,/images/,g' index.html
+sed -i 's,/web/.*cs_/http://horizon.io:80/css/,/css/,g' index.html
+sed -i 's,/web/.*im_/http://horizon.io:80/favicon/,/favicon/,g' index.html
+sed -i 's,//web.archive.org/web/.*js_/http://fast.fonts.net/jsapi/,//fast.fonts.net/jsapi/,g' index.html
+exit
+sed -i 's,,,g' index.html
+sed -i 's,,,g' index.html
+sed -i 's,,,g' index.html

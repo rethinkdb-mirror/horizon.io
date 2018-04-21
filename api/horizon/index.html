@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Horizon</title>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/github.css">
+
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="shortcut icon" href="/favicon/favicon.ico">
+
+        <!-- fonts.com -->
+        <script type="text/javascript">
+            // first, create the object that contains
+            // configuration variables
+            MTIConfig = {};
+
+            // next, add a variable that will control
+            // whether or not FOUT will be prevented
+            MTIConfig.EnableCustomFOUTHandler = false // true = prevent FOUT
+        </script>
+        <script type="text/javascript" src="//fast.fonts.net/jsapi/5cf5064a-b80d-4123-82d3-5c7a863edb22.js"></script>
+        <!-- jquery -->
+        <script type="text/javascript" src="/js/jquery/jquery-2.2.3.min.js"></script>
+        <!-- waypoints -->
+        <script type="text/javascript" src="/js/waypoints/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="/js/waypoints/sticky.min.js"></script>
+        <!-- horizon.io -->
+        <script type="text/javascript" src="/js/site.js"></script>
+    </head>
+    <body>
+        
+
+        <nav class="site-nav">
+            <div class="site-container">
+                <a class="logo" href="/"><img src="/images/horizon-logo.png" alt="Horizon"></a>
+                <ul class="navbar-links">
+                    <li class="menu-trigger">
+                        <svg height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="miu" stroke="none" stroke-width="1"><g id="Artboard-1" transform="translate(-395.000000, -479.000000)"><g id="slice" transform="translate(215.000000, 119.000000)"/><path d="M396.500836,485 C396.224232,485 396,485.214035 396,485.504684 L396,486.495316 C396,486.774045 396.217742,487 396.500836,487 L417.499164,487 C417.775768,487 418,486.785965 418,486.495316 L418,485.504684 C418,485.225955 417.782258,485 417.499164,485 L396.500836,485 Z M396.500836,490 C396.224232,490 396,490.214035 396,490.504684 L396,491.495316 C396,491.774045 396.217742,492 396.500836,492 L417.499164,492 C417.775768,492 418,491.785965 418,491.495316 L418,490.504684 C418,490.225955 417.782258,490 417.499164,490 L396.500836,490 Z M396.500836,495 C396.224232,495 396,495.214035 396,495.504684 L396,496.495316 C396,496.774045 396.217742,497 396.500836,497 L417.499164,497 C417.775768,497 418,496.785965 418,496.495316 L418,495.504684 C418,495.225955 417.782258,495 417.499164,495 L396.500836,495 Z" id="editor-list-view-hambuger-menu-glyph"/></g></g></svg>
+
+                    </li>
+                    <li>
+                        <a href="/cloud">Horizon Cloud</a>
+                    </li>
+                    <li>
+                        <a href="/install">Install</a>
+                    </li>
+                    <li>
+                        <a href="/faq">FAQ</a>
+                    </li>
+                    <li class="active">
+                        <a href="/docs">Docs</a>
+                    </li>
+                    <li>
+                        <a href="/community">Community</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="site-content">
+            <section class="documentation">
+    <div class="site-container">
+        <nav class="docs-nav">
+            
+            <section>
+                <h1>Horizon basics</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- index | api-horizon -->
+                            <a href="/docs">Overview</a>
+                        </li>
+                    
+                        <li>
+                            <!-- install | api-horizon -->
+                            <a href="/install">Install Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- faq | api-horizon -->
+                            <a href="/faq">FAQ</a>
+                        </li>
+                    
+                        <li>
+                            <!-- getting-started | api-horizon -->
+                            <a href="/docs/getting-started">Getting started</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+            <section>
+                <h1>Building Horizon apps</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- cli | api-horizon -->
+                            <a href="/docs/cli">Horizon CLI</a>
+                        </li>
+                    
+                        <li>
+                            <!-- auth | api-horizon -->
+                            <a href="/docs/auth">Authentication</a>
+                        </li>
+                    
+                        <li>
+                            <!-- users | api-horizon -->
+                            <a href="/docs/users">Users and groups</a>
+                        </li>
+                    
+                        <li>
+                            <!-- permissions | api-horizon -->
+                            <a href="/docs/permissions">Permissions</a>
+                        </li>
+                    
+                        <li>
+                            <!-- api-collection | api-horizon -->
+                            <a href="/api/collection">Collection API</a>
+                        </li>
+                    
+                        <li class="active">
+                            <!-- api-horizon | api-horizon -->
+                            <a href="/api/horizon">Horizon API</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+            <section>
+                <h1>Resources</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- config | api-horizon -->
+                            <a href="/docs/configuration">Configuring Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- embed | api-horizon -->
+                            <a href="/docs/embed">Embedding Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- examples | api-horizon -->
+                            <a href="/docs/examples">Example apps</a>
+                        </li>
+                    
+                        <li>
+                            <!-- limitations | api-horizon -->
+                            <a href="/docs/limitations">Limitations</a>
+                        </li>
+                    
+                        <li>
+                            <!-- docker | api-horizon -->
+                            <a href="/docs/docker">Horizon with Docker</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+        </nav>
+        <section class="docs-article document">
+            
+            <h1 class="title">Horizon</h1>
+            <p>The <code class="highlighter-rouge">Horizon</code> object instantiates and manages the connection to the Horizon server.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// connect to the Horizon server, after Horizon has been loaded via</span>
+<span class="c1">// &lt;script&gt; tag or require</span>
+<span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<ul id="markdown-toc">
+  <li><a href="#constructor" id="markdown-toc-constructor">Horizon constructor arguments</a></li>
+  <li><a href="#lazy-writes" id="markdown-toc-lazy-writes">Lazy writes</a></li>
+  <li><a href="#connect" id="markdown-toc-connect">Horizon.connect</a></li>
+  <li><a href="#disconnect" id="markdown-toc-disconnect">Horizon.disconnect</a></li>
+  <li><a href="#status" id="markdown-toc-status">Horizon.status</a></li>
+  <li><a href="#onready" id="markdown-toc-onready">Horizon.onReady</a></li>
+  <li><a href="#ondisconnected" id="markdown-toc-ondisconnected">Horizon.onDisconnected</a></li>
+  <li><a href="#onsocketerror" id="markdown-toc-onsocketerror">Horizon.onSocketError</a></li>
+  <li><a href="#hasauthtoken" id="markdown-toc-hasauthtoken">Horizon.hasAuthToken</a></li>
+  <li><a href="#currentuser" id="markdown-toc-currentuser">Horizon.currentUser</a></li>
+  <li><a href="#authendpoint" id="markdown-toc-authendpoint">Horizon.authEndpoint</a></li>
+  <li><a href="#clearauthtokens" id="markdown-toc-clearauthtokens">Horizon.clearAuthTokens</a></li>
+  <li><a href="#aggregate" id="markdown-toc-aggregate">Horizon.aggregate</a></li>
+  <li><a href="#model" id="markdown-toc-model">Horizon.model</a></li>
+</ul>
+
+<h2 id="constructor">Horizon constructor arguments</h2>
+
+<p>All arguments are optional. Pass them to <code class="highlighter-rouge">Horizon</code> in an object with option keys: <code class="highlighter-rouge"><span class="p">{</span><span class="err">secure:</span><span class="w"> </span><span class="err">true</span><span class="p">}</span></code>.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">host</code>: the hostname of the Horizon server. This defaults to <code class="highlighter-rouge">window.location</code>, i.e., the machine that served the application to the client.</li>
+  <li><code class="highlighter-rouge">secure</code>: a boolean indicating whether the server should use secure websockets. Defaults to <code class="highlighter-rouge">true</code> if static site is served via HTTPS, <code class="highlighter-rouge">false</code> otherwise.</li>
+  <li><code class="highlighter-rouge">path</code>: the path the Horizon endpoint can be found under on <code class="highlighter-rouge">host</code>. Defaults to <code class="highlighter-rouge">"horizon"</code>.</li>
+  <li><code class="highlighter-rouge">lazyWrites</code>: a boolean indicating whether write operations should be performed in a “lazy” fashion (see below). Defaults to <code class="highlighter-rouge">false</code>.</li>
+  <li><code class="highlighter-rouge">authType</code>: either a string indicating the authentication method to use for your application’s users, or a JSON Web Token to use for authentication. This is useful for bootstrapping the admin user, or for integrating with non-browser-based authentication methods.
+    <ul>
+      <li>Valid strings are <code class="highlighter-rouge">"unauthenticated"</code>, <code class="highlighter-rouge">"anonymous"</code>, or <code class="highlighter-rouge">"token"</code>. Defaults to <code class="highlighter-rouge">"unauthenticated"</code>.</li>
+      <li>To use a JWT, pass an object of the following form: <code class="highlighter-rouge"><span class="p">{</span><span class="err">token:</span><span class="w"> </span><span class="err">&lt;TOKEN&gt;,</span><span class="w"> </span><span class="err">storeLocally:</span><span class="w"> </span><span class="err">[true|false]</span><span class="p">}</span></code>. If <code class="highlighter-rouge">storeLocally</code> is <code class="highlighter-rouge">true</code> (the default), the token will be stored in the browser’s local storage; if <code class="highlighter-rouge">false</code>, you’ll need to re-authenticate every time you create a Horizon object.</li>
+      <li>See <a href="/docs/auth">Authentication</a> for more information about authentication methods and token creation.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="lazy-writes">Lazy writes</h2>
+
+<p>When <code class="highlighter-rouge">lazyWrites</code> is set to <code class="highlighter-rouge">true</code>, Horizon queries that modify a Collection will not perform their writes when the query is first executed, but instead perform then when the Observable returned by the query is iterated through.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">({</span><span class="na">lazyWrites</span><span class="p">:</span> <span class="kc">true</span><span class="p">});</span>
+
+<span class="c1">// because lazyWrites is set, nothing is sent to the server here...</span>
+<span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">messages</span><span class="p">.</span><span class="nx">store</span><span class="p">([</span>
+    <span class="p">{</span>
+        <span class="na">from</span><span class="p">:</span> <span class="s2">"agatha"</span><span class="p">,</span>
+        <span class="na">text</span><span class="p">:</span> <span class="s2">"Meet at Smugglers' Cove on Saturday"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="na">from</span><span class="p">:</span> <span class="s2">"bob"</span><span class="p">,</span>
+        <span class="na">text</span><span class="p">:</span> <span class="s2">"Would Superman lose a fight against Wonder Woman?"</span>
+    <span class="p">}</span>
+<span class="p">]);</span>
+
+<span class="c1">// ...but instead, writes are performed here</span>
+<span class="nx">query</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">uuid</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Document ${uuid} was created.'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>A <code class="highlighter-rouge">Horizon</code> object can be called as a function, taking a string as its argument. It returns a <a href="/api/collection">Collection</a> object:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// Return the messages Collection</span>
+<span class="kr">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s1">'messages'</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h1 class="no_toc" id="methods">Methods</h1>
+
+<h2 id="connect">Horizon.connect</h2>
+
+<p>Establish a Horizon connection.</p>
+
+<p>Note that you can create a <a href="/api/collection">Collection</a> from the <code class="highlighter-rouge">Horizon</code> instance without calling <code class="highlighter-rouge">connect()</code> first. Once you start using the collection, the connection will be automatically established.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+
+<span class="c1">// Get access to the messages collection</span>
+<span class="kr">const</span> <span class="nx">messages</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">(</span><span class="s1">'messages'</span><span class="p">);</span>
+
+<span class="c1">// Start establishing the Horizon connection.</span>
+<span class="c1">// This step is optional. We can skip it and go directly to the next line.</span>
+<span class="nx">hz</span><span class="p">.</span><span class="nx">connect</span><span class="p">();</span>
+
+<span class="c1">// Start using the collection</span>
+<span class="nx">messages</span><span class="p">.</span><span class="nx">store</span><span class="p">({</span> <span class="na">msg</span><span class="p">:</span> <span class="s1">'Hello World!'</span> <span class="p">});</span>
+</code></pre>
+</div>
+
+<h2 id="disconnect">Horizon.disconnect</h2>
+
+<p>Close a Horizon connection.</p>
+
+<h2 id="status">Horizon.status</h2>
+
+<p>Receive status updates about the connection to the Horizon server.</p>
+
+<p>Calling <code class="highlighter-rouge">status()</code> without any arguments returns an <a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html">RxJS Observable</a>. Alternatively you can pass in a callback to execute when the status of the connection changes. Any arguments passed to <code class="highlighter-rouge">status()</code> will be treated as if passed to <code class="highlighter-rouge">Observable.subscribe(args...)</code>.</p>
+
+<p>The emitted status objects can be one of the following:</p>
+
+<ul>
+  <li><code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">type:</span><span class="w"> </span><span class="err">'unconnected'</span><span class="w"> </span><span class="p">}</span></code>: The initial status before any connection has been established.</li>
+  <li><code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">type:</span><span class="w"> </span><span class="err">'connected'</span><span class="w"> </span><span class="p">}</span></code>: A websocket connection has been established. However the Horizon connection is not ready yet, since the Horizon handshake hasn’t been performed yet.</li>
+  <li><code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">type:</span><span class="w"> </span><span class="err">'ready'</span><span class="w"> </span><span class="p">}</span></code>: The <code class="highlighter-rouge">Horizon</code> instance is now fully usable.</li>
+  <li><code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">type:</span><span class="w"> </span><span class="err">'error'</span><span class="w"> </span><span class="p">}</span></code>: An error has occurred. A separate <code class="highlighter-rouge">Error</code> object with the specific error message will be emitted separately through the error callback (if any is subscribed on the <code class="highlighter-rouge">Observable</code>).</li>
+  <li><code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">type:</span><span class="w"> </span><span class="err">'disconnected'</span><span class="w"> </span><span class="p">}</span></code>: The websocket was closed.</li>
+</ul>
+
+<h2 id="onready">Horizon.onReady</h2>
+
+<p>Similar to <code class="highlighter-rouge">Horizon.status()</code>, but only emits <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">type:</span><span class="w"> </span><span class="err">'ready'</span><span class="w"> </span><span class="p">}</span></code> events.</p>
+
+<h2 id="ondisconnected">Horizon.onDisconnected</h2>
+
+<p>Similar to <code class="highlighter-rouge">Horizon.status()</code>, but only emits <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">type:</span><span class="w"> </span><span class="err">'disconnected'</span><span class="w"> </span><span class="p">}</span></code> events.</p>
+
+<h2 id="onsocketerror">Horizon.onSocketError</h2>
+
+<p>Similar to <code class="highlighter-rouge">Horizon.status()</code>, but only emits <code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">type:</span><span class="w"> </span><span class="err">'error'</span><span class="w"> </span><span class="p">}</span></code> events.</p>
+
+<h2 id="hasauthtoken">Horizon.hasAuthToken</h2>
+
+<p>Check if the user has a valid authorization token (i.e., has logged in).</p>
+
+<p>See <a href="/docs/auth">Authentication</a> for more details.</p>
+
+<h2 id="currentuser">Horizon.currentUser</h2>
+
+<p>Returns a query for the current user, that you can run by calling either <a href="/api/collection/#watch"><code class="highlighter-rouge">watch()</code></a> or <a href="/api/collection/#fetch"><code class="highlighter-rouge">fetch()</code></a>.</p>
+
+<p>The query result is a user object as described in <a href="/docs/users">Users and groups</a>, or an empty object if the user is unauthenticated.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+<span class="nx">hz</span><span class="p">.</span><span class="nx">currentUser</span><span class="p">().</span><span class="nx">fetch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">user</span><span class="p">))</span> <span class="p">);</span>
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">currentUser()</code> requires read <a href="/docs/permissions">permissions</a> on the user’s document in the <code class="highlighter-rouge">"users"</code> collection. The following rule enables the required permissions:</p>
+
+<div class="language-toml highlighter-rouge"><pre class="highlight"><code><span class="nn">[groups.default.rules.read_current_user]</span>
+<span class="py">template</span> <span class="p">=</span> <span class="s">"collection('users').find({id: userId()})"</span>
+</code></pre>
+</div>
+
+<p>See <a href="/docs/permissions">Permissions</a> for more information on how to configure access rules, and <a href="/docs/auth">Authentication</a> to find out how to configure user authentication on the Horizon server.</p>
+
+<h2 id="authendpoint">Horizon.authEndpoint</h2>
+
+<p>Return a previously-configured OAuth endpoint.</p>
+
+<p>See <a href="/docs/auth">Authentication</a> for more details.</p>
+
+<h2 id="clearauthtokens">Horizon.clearAuthTokens</h2>
+
+<p>Clear authentication tokens from local storage.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">Horizon</span><span class="p">.</span><span class="nx">clearAuthTokens</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<p>See <a href="/docs/auth">Authentication</a> for more details.</p>
+
+<h2 id="aggregate">Horizon.aggregate</h2>
+
+<p>Combine the results of multiple Horizon queries into one result set.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+
+<span class="kd">var</span> <span class="nx">userId</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="nx">hz</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">({</span>
+    <span class="na">userId</span><span class="p">:</span> <span class="nx">userId</span><span class="p">,</span>
+    <span class="na">user</span><span class="p">:</span> <span class="nx">hz</span><span class="p">(</span><span class="s1">'users'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="nx">userId</span><span class="p">),</span>
+    <span class="na">activity</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">posts</span><span class="p">:</span> <span class="nx">hz</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">).</span><span class="nx">findAll</span><span class="p">({</span><span class="na">user</span><span class="p">:</span> <span class="nx">userId</span><span class="p">}),</span>
+        <span class="na">topComments</span><span class="p">:</span> <span class="nx">hz</span><span class="p">(</span><span class="s1">'comments'</span><span class="p">).</span><span class="nx">findAll</span><span class="p">({</span><span class="na">user</span><span class="p">:</span> <span class="nx">userId</span><span class="p">}).</span><span class="nx">order</span><span class="p">(</span><span class="s1">'rating'</span><span class="p">,</span> <span class="s1">'descending'</span><span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}).</span><span class="nx">watch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">subscribeFunction</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>(In real code, <a href="/api/collection/#subscribe">subscribe()</a> would contain a callback function to receive the Observable results from <a href="/api/collection/#watch">watch()</a>.)</p>
+
+<p>The values for fields in aggregates may contain:</p>
+
+<ul>
+  <li>Horizon queries</li>
+  <li>Literals (as in the <code class="highlighter-rouge">userId</code> field above)</li>
+  <li>Objects (as in the <code class="highlighter-rouge">activity</code> field above)</li>
+  <li>Observables</li>
+  <li>Promises</li>
+  <li>Arrays</li>
+</ul>
+
+<p>Observables inside an aggregate are called when the aggregate is subscribed to, and behave identically whether the aggregate is called with <code class="highlighter-rouge">fetch()</code> or <code class="highlighter-rouge">watch()</code>. So an aggregate such as the following:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">hz</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">({</span>
+    <span class="na">counter</span><span class="p">:</span> <span class="nx">Observable</span><span class="p">.</span><span class="nx">timer</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">),</span>
+    <span class="na">result</span><span class="p">:</span> <span class="nx">hz</span><span class="p">(</span><span class="s1">'foo'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s1">'bar'</span><span class="p">)</span>
+<span class="p">}).</span><span class="nx">watch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">({</span> <span class="nx">next</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">}});</span>
+</code></pre>
+</div>
+
+<p>will be emitted every time the document in the <code class="highlighter-rouge">result</code> query is changed and every time the counter is incremented.</p>
+
+<p>Arrays are not flattened. A field/value such as <code class="highlighter-rouge">dogShow: [hz('owners'), hz('pets')]</code> will result in output similar to <code class="highlighter-rouge">[['bob', 'agatha', ...], ['fluffy', 'fido', ...]]</code>. (Use <a href="/api/collection/#merge">merge()</a> for a union query.)</p>
+
+<p>Aggregates can be nested, although this is equivalent to simply using objects for the “inner” aggregates.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">/// this...</span>
+<span class="nx">hz</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">({</span>
+    <span class="na">foo</span><span class="p">:</span> <span class="nx">hz</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">({</span> <span class="p">...</span> <span class="p">})</span>
+<span class="p">});</span>
+
+<span class="c1">// ...is equivalent to this</span>
+<span class="nx">hz</span><span class="p">.</span><span class="nx">aggregate</span><span class="p">({</span>
+    <span class="na">foo</span><span class="p">:</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<h2 id="model">Horizon.model</h2>
+
+<p>Create a template for aggregates, using parameters.</p>
+
+<p>The <a href="#aggregate">aggregate example</a> could be rewritten with <code class="highlighter-rouge">model</code> this way:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">hz</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Horizon</span><span class="p">();</span>
+
+<span class="kr">const</span> <span class="nx">userModel</span> <span class="o">=</span> <span class="nx">hz</span><span class="p">.</span><span class="nx">model</span><span class="p">((</span><span class="nx">userId</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="na">userId</span><span class="p">:</span> <span class="nx">userId</span><span class="p">,</span>
+        <span class="na">user</span><span class="p">:</span> <span class="nx">horizon</span><span class="p">(</span><span class="s1">'users'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="nx">userId</span><span class="p">),</span>
+        <span class="na">activity</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">posts</span><span class="p">:</span> <span class="nx">horizon</span><span class="p">(</span><span class="s1">'posts'</span><span class="p">).</span><span class="nx">findAll</span><span class="p">({</span><span class="na">user</span><span class="p">:</span> <span class="nx">userId</span><span class="p">}),</span>
+            <span class="na">topComments</span><span class="p">:</span> <span class="nx">horizon</span><span class="p">(</span><span class="s1">'comments'</span><span class="p">).</span><span class="nx">findAll</span><span class="p">({</span><span class="na">user</span><span class="p">:</span> <span class="nx">userId</span><span class="p">}).</span><span class="nx">order</span><span class="p">(</span><span class="s1">'rating'</span><span class="p">,</span> <span class="s1">'descending'</span><span class="p">).</span><span class="nx">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">userModel</span><span class="p">(</span><span class="mi">100</span><span class="p">).</span><span class="nx">watch</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">subscribeFunction</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>You can do anything with <code class="highlighter-rouge">model</code> that you can do with <code class="highlighter-rouge">aggregate</code>, including nesting models.</p>
+
+
+        </section>
+    </div>
+</section>
+
+        </section>
+        <footer>
+            <div class="site-container">
+                <section class="about">
+                    <h1 class="hz">Horizon is a <strong>realtime, open-source backend</strong> for JavaScript apps.</h1>
+                    <a href="https://github.com/rethinkdb/horizon" class="button primary-button">Star the project on GitHub</a>
+                </section>
+                <section class="footer-right">
+                    <nav class="site-map">
+                        <section>
+                            <h1>Getting started</h1>
+                            <ul>
+                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="/install">Install</a></li>
+                                <li><a href="/docs/getting-started">Getting started</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Documentation</h1>
+                            <ul>
+                                <li><a href="/api/collection">Collection API</li>
+                                <li><a href="/api/horizon">Horizon API</a></li>
+                                <li><a href="/docs/cli">Horizon CLI</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Get involved</h1>
+                            <ul>
+                                <li><a href="http://slack.rethinkdb.com">Join us on Slack #horizon</a></li>
+                                <li><a href="https://discuss.horizon.io">Discuss on Discourse</a></li>
+                                <li><a href="https://rethinkdb.com/community/shirts-for-stories/">Shirts for Stories</a></li>
+                            </ul>
+                        </section>
+                    </nav>
+                    <h1 class="github">Built by the <a href="https://rethinkdb.com">RethinkDB team</a> and an amazing community.</h2>
+                </section>
+            </div>
+        </footer>
+        <script type="text/javascript">
+          var _gauges = _gauges || [];
+          (function() {
+            var t   = document.createElement('script');
+            t.type  = 'text/javascript';
+            t.async = true;
+            t.id    = 'gauges-tracker';
+            t.setAttribute('data-site-id', '56fb1a594b2ffa61f100a699');
+            t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+            t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(t, s);
+          })();
+        </script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-9922584-3', 'auto');
+          ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

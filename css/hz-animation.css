@@ -1,0 +1,15 @@
+.devicesSVG {
+  width: 100%;
+  height: 100%;
+  overflow: hidden
+}
+
+.horizonSVG {
+  width: 100%;
+  height: 100%;
+  overflow: visible
+}
+
+svg {
+  visibility: hidden;
+}

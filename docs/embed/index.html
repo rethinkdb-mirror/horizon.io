@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Embedding Horizon</title>
+
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/github.css">
+
+        <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="shortcut icon" href="/favicon/favicon.ico">
+
+        <!-- fonts.com -->
+        <script type="text/javascript">
+            // first, create the object that contains
+            // configuration variables
+            MTIConfig = {};
+
+            // next, add a variable that will control
+            // whether or not FOUT will be prevented
+            MTIConfig.EnableCustomFOUTHandler = false // true = prevent FOUT
+        </script>
+        <script type="text/javascript" src="//fast.fonts.net/jsapi/5cf5064a-b80d-4123-82d3-5c7a863edb22.js"></script>
+        <!-- jquery -->
+        <script type="text/javascript" src="/js/jquery/jquery-2.2.3.min.js"></script>
+        <!-- waypoints -->
+        <script type="text/javascript" src="/js/waypoints/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="/js/waypoints/sticky.min.js"></script>
+        <!-- horizon.io -->
+        <script type="text/javascript" src="/js/site.js"></script>
+    </head>
+    <body>
+        
+
+        <nav class="site-nav">
+            <div class="site-container">
+                <a class="logo" href="/"><img src="/images/horizon-logo.png" alt="Horizon"></a>
+                <ul class="navbar-links">
+                    <li class="menu-trigger">
+                        <svg height="24px" version="1.1" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="miu" stroke="none" stroke-width="1"><g id="Artboard-1" transform="translate(-395.000000, -479.000000)"><g id="slice" transform="translate(215.000000, 119.000000)"/><path d="M396.500836,485 C396.224232,485 396,485.214035 396,485.504684 L396,486.495316 C396,486.774045 396.217742,487 396.500836,487 L417.499164,487 C417.775768,487 418,486.785965 418,486.495316 L418,485.504684 C418,485.225955 417.782258,485 417.499164,485 L396.500836,485 Z M396.500836,490 C396.224232,490 396,490.214035 396,490.504684 L396,491.495316 C396,491.774045 396.217742,492 396.500836,492 L417.499164,492 C417.775768,492 418,491.785965 418,491.495316 L418,490.504684 C418,490.225955 417.782258,490 417.499164,490 L396.500836,490 Z M396.500836,495 C396.224232,495 396,495.214035 396,495.504684 L396,496.495316 C396,496.774045 396.217742,497 396.500836,497 L417.499164,497 C417.775768,497 418,496.785965 418,496.495316 L418,495.504684 C418,495.225955 417.782258,495 417.499164,495 L396.500836,495 Z" id="editor-list-view-hambuger-menu-glyph"/></g></g></svg>
+
+                    </li>
+                    <li>
+                        <a href="/cloud">Horizon Cloud</a>
+                    </li>
+                    <li>
+                        <a href="/install">Install</a>
+                    </li>
+                    <li>
+                        <a href="/faq">FAQ</a>
+                    </li>
+                    <li class="active">
+                        <a href="/docs">Docs</a>
+                    </li>
+                    <li>
+                        <a href="/community">Community</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="site-content">
+            <section class="documentation">
+    <div class="site-container">
+        <nav class="docs-nav">
+            
+            <section>
+                <h1>Horizon basics</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- index | embed -->
+                            <a href="/docs">Overview</a>
+                        </li>
+                    
+                        <li>
+                            <!-- install | embed -->
+                            <a href="/install">Install Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- faq | embed -->
+                            <a href="/faq">FAQ</a>
+                        </li>
+                    
+                        <li>
+                            <!-- getting-started | embed -->
+                            <a href="/docs/getting-started">Getting started</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+            <section>
+                <h1>Building Horizon apps</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- cli | embed -->
+                            <a href="/docs/cli">Horizon CLI</a>
+                        </li>
+                    
+                        <li>
+                            <!-- auth | embed -->
+                            <a href="/docs/auth">Authentication</a>
+                        </li>
+                    
+                        <li>
+                            <!-- users | embed -->
+                            <a href="/docs/users">Users and groups</a>
+                        </li>
+                    
+                        <li>
+                            <!-- permissions | embed -->
+                            <a href="/docs/permissions">Permissions</a>
+                        </li>
+                    
+                        <li>
+                            <!-- api-collection | embed -->
+                            <a href="/api/collection">Collection API</a>
+                        </li>
+                    
+                        <li>
+                            <!-- api-horizon | embed -->
+                            <a href="/api/horizon">Horizon API</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+            <section>
+                <h1>Resources</h1>
+                <ul>
+                    
+                        <li>
+                            <!-- config | embed -->
+                            <a href="/docs/configuration">Configuring Horizon</a>
+                        </li>
+                    
+                        <li class="active">
+                            <!-- embed | embed -->
+                            <a href="/docs/embed">Embedding Horizon</a>
+                        </li>
+                    
+                        <li>
+                            <!-- examples | embed -->
+                            <a href="/docs/examples">Example apps</a>
+                        </li>
+                    
+                        <li>
+                            <!-- limitations | embed -->
+                            <a href="/docs/limitations">Limitations</a>
+                        </li>
+                    
+                        <li>
+                            <!-- docker | embed -->
+                            <a href="/docs/docker">Horizon with Docker</a>
+                        </li>
+                    
+                </ul>
+            </section>
+            
+        </nav>
+        <section class="docs-article document">
+            
+            <h1 class="title">Embedding Horizon</h1>
+            <p>While you can start the Horizon server from the <code class="highlighter-rouge">hz</code> <a href="/docs/cli">command line tool</a>, it’s also possible to embed it into a Node web app by importing <code class="highlighter-rouge">@horizon/server</code> and passing a server connection to the Horizon constructor.</p>
+
+<p>For instance, using the <a href="http://expressjs.com">Express</a> framework, the steps are:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="cp">#!/usr/bin/env node
+</span><span class="s1">'use strict'</span>
+
+<span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'express'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">horizon</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@horizon/server'</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">httpServer</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8181</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">project_name</span><span class="p">:</span> <span class="s1">'myProject'</span><span class="p">,</span>
+    <span class="na">auth</span><span class="p">:</span> <span class="p">{</span> <span class="na">token_secret</span><span class="p">:</span> <span class="s1">'my_super_secret_secret'</span> <span class="p">}</span>
+<span class="p">};</span>
+<span class="kr">const</span> <span class="nx">horizonServer</span> <span class="o">=</span> <span class="nx">horizon</span><span class="p">(</span><span class="nx">httpServer</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Listening on port 8181.'</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>Express and Horizon are required, and Express is instantiated with <code class="highlighter-rouge">app.listen()</code>. Then the resulting <code class="highlighter-rouge">httpServer</code> object is passed to <code class="highlighter-rouge">horizon</code> along with an option object. Options that can be passed to the Horizon server constructor are identical to the similarly-named options that can be defined in the <a href="/docs/configuration">configuration file</a>, with the same defaults:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">project_name</code>: <code class="highlighter-rouge">'horizon'</code></li>
+  <li><code class="highlighter-rouge">rdb_host</code>: <code class="highlighter-rouge">'localhost'</code></li>
+  <li><code class="highlighter-rouge">rdb_port</code>: <code class="highlighter-rouge">28015</code></li>
+  <li><code class="highlighter-rouge">auto_create_collection</code>: <code class="highlighter-rouge">false</code></li>
+  <li><code class="highlighter-rouge">auto_create_index</code>: <code class="highlighter-rouge">false</code></li>
+  <li><code class="highlighter-rouge">permissions</code>: <code class="highlighter-rouge">true</code></li>
+  <li><code class="highlighter-rouge">path</code>: <code class="highlighter-rouge">'/horizon'</code></li>
+  <li><code class="highlighter-rouge">auth</code>:
+    <ul>
+      <li><code class="highlighter-rouge">success_redirect</code>: <code class="highlighter-rouge">'/'</code></li>
+      <li><code class="highlighter-rouge">failure_redirect</code>: <code class="highlighter-rouge">'/'</code></li>
+      <li><code class="highlighter-rouge">duration</code>: <code class="highlighter-rouge">'1d'</code></li>
+      <li><code class="highlighter-rouge">create_new_users</code>: <code class="highlighter-rouge">true</code></li>
+      <li><code class="highlighter-rouge">new_user_group</code>: <code class="highlighter-rouge">'authenticated'</code></li>
+      <li><code class="highlighter-rouge">token_secret</code>: <code class="highlighter-rouge">null</code></li>
+      <li><code class="highlighter-rouge">allow_anonymous</code>: <code class="highlighter-rouge">false</code></li>
+      <li><code class="highlighter-rouge">allow_unauthenticated</code>: <code class="highlighter-rouge">false</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Note:</strong> Passing options to the constructor is the only way to configure the Horizon server when it’s embedded. The <code class="highlighter-rouge">.hz/config.toml</code> configuration file will not be read.</p>
+
+<p>For some examples with other frameworks, including Koa and Hapi, consult the Horizon <a href="/docs/examples">examples page</a>.</p>
+
+<h2 id="configuring-oauth-providers">Configuring OAuth providers</h2>
+
+<p>OAuth endpoints cannot be set up through the options passed to the Horizon server constructor. Instead, you’ll need to use the <code class="highlighter-rouge">add_auth_provider</code> method on the instantiated Horizon server object.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// ... initialization code as above for Express</span>
+<span class="kr">const</span> <span class="nx">horizonServer</span> <span class="o">=</span> <span class="nx">horizon</span><span class="p">(</span><span class="nx">httpServer</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+
+<span class="nx">horizonServer</span><span class="p">.</span><span class="nx">add_auth_provider</span><span class="p">(</span>
+    <span class="nx">horizon</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">github</span><span class="p">,</span>
+    <span class="p">{</span> <span class="na">id</span><span class="p">:</span> <span class="s1">'id'</span><span class="p">,</span> <span class="na">secret</span><span class="p">:</span> <span class="s1">'secret'</span><span class="p">,</span> <span class="na">path</span><span class="p">:</span> <span class="s1">'github'</span> <span class="p">}</span>
+<span class="p">);</span>
+</code></pre>
+</div>
+
+<p>For more details on setting up Oauth, read the section in <a href="/docs/auth/#oauth">Authentication</a>.</p>
+
+<h2 id="attaching-horizon-to-multiple-http-servers">Attaching Horizon to multiple HTTP servers</h2>
+
+<p>It’s possible to pass a list of HTTP servers to the Horizon constructor rather than just one. Here’s an example script that attaches Horizon to a public HTTPS server on port 8181 and a local HTTP server on port 8282:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="s1">'use strict'</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">horizon</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'@horizon/server'</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fs'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">https</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'https'</span><span class="p">);</span>
+
+<span class="c1">// Attach the horizon server to two http servers</span>
+<span class="c1">// one on [::]:8181 over HTTPS and one on 127.0.0.1:8282 over HTTP</span>
+<span class="kr">const</span> <span class="nx">onHttpRequest</span> <span class="o">=</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">404</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">'File not found.'</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">publicServer</span> <span class="o">=</span> <span class="nx">https</span><span class="p">.</span><span class="nx">createServer</span><span class="p">({</span>
+    <span class="na">key</span><span class="p">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">'key.pem'</span><span class="p">),</span>
+    <span class="na">cert</span><span class="p">:</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">'cert.pem'</span><span class="p">),</span>
+<span class="p">},</span> <span class="nx">onHttpRequest</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">loopbackServer</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">on_http_request</span><span class="p">);</span>
+
+<span class="nx">publicServer</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8181</span><span class="p">);</span>
+<span class="nx">loopbackServer</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8282</span><span class="p">,</span> <span class="s1">'127.0.0.1'</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">horizonServer</span> <span class="o">=</span> <span class="nx">horizon</span><span class="p">([</span><span class="nx">publicServer</span><span class="p">,</span> <span class="nx">loopbackServer</span><span class="p">],</span> <span class="p">{</span>
+    <span class="na">project_name</span><span class="p">:</span> <span class="s1">'myProjectName'</span><span class="p">,</span>
+    <span class="na">auth</span><span class="p">:</span> <span class="p">{</span>       
+      <span class="na">token_secret</span><span class="p">:</span> <span class="s1">'foo-bar'</span><span class="p">,</span>
+      <span class="na">allow_anonymous</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">allow_unauthenticated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">});</span>
+
+<span class="c1">// Add Twitch authentication</span>
+<span class="nx">horizonServer</span><span class="p">.</span><span class="nx">add_auth_provider</span><span class="p">(</span><span class="nx">horizon</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">twitch</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="s1">'twitch'</span><span class="p">,</span>
+    <span class="na">id</span><span class="p">:</span> <span class="s1">'0000000000000000000000000000000'</span><span class="p">,</span>
+    <span class="na">secret</span><span class="p">:</span> <span class="s1">'0000000000000000000000000000000'</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// Shut down the server after 60 seconds</span>
+<span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">horizonServer</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+    <span class="nx">publicServer</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+    <span class="nx">loopbackServer</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<span class="p">},</span> <span class="mi">60000</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h2 id="accessing-the-rethinkdb-r-object">Accessing the Rethinkdb <code class="highlighter-rouge">r</code> object</h2>
+
+<p>When running in embedded mode, you can write <a href="http://rethinkdb.com/docs/introduction-to-reql/">native ReQL queries</a> by accessing <code class="highlighter-rouge">r</code> on an instance of the <code class="highlighter-rouge">horizon</code> object.</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// ... initialization code as above for Express</span>
+<span class="kr">const</span> <span class="nx">horizonServer</span> <span class="o">=</span> <span class="nx">horizon</span><span class="p">(</span><span class="nx">httpServer</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">r</span> <span class="o">=</span> <span class="nx">horizon</span><span class="p">.</span><span class="nx">r</span><span class="p">;</span>
+
+<span class="nx">horizonServer</span><span class="p">.</span><span class="nx">_reql_conn</span><span class="p">.</span><span class="nx">read</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">reql_conn</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">r</span><span class="p">.</span><span class="nx">db</span><span class="p">(</span><span class="s1">'horizon'</span><span class="p">).</span><span class="nx">table</span><span class="p">(</span><span class="s1">'users'</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="nx">run</span><span class="p">(</span><span class="nx">reql_conn</span><span class="p">.</span><span class="nx">connection</span><span class="p">());</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+        </section>
+    </div>
+</section>
+
+        </section>
+        <footer>
+            <div class="site-container">
+                <section class="about">
+                    <h1 class="hz">Horizon is a <strong>realtime, open-source backend</strong> for JavaScript apps.</h1>
+                    <a href="https://github.com/rethinkdb/horizon" class="button primary-button">Star the project on GitHub</a>
+                </section>
+                <section class="footer-right">
+                    <nav class="site-map">
+                        <section>
+                            <h1>Getting started</h1>
+                            <ul>
+                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="/install">Install</a></li>
+                                <li><a href="/docs/getting-started">Getting started</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Documentation</h1>
+                            <ul>
+                                <li><a href="/api/collection">Collection API</li>
+                                <li><a href="/api/horizon">Horizon API</a></li>
+                                <li><a href="/docs/cli">Horizon CLI</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h1>Get involved</h1>
+                            <ul>
+                                <li><a href="http://slack.rethinkdb.com">Join us on Slack #horizon</a></li>
+                                <li><a href="https://discuss.horizon.io">Discuss on Discourse</a></li>
+                                <li><a href="https://rethinkdb.com/community/shirts-for-stories/">Shirts for Stories</a></li>
+                            </ul>
+                        </section>
+                    </nav>
+                    <h1 class="github">Built by the <a href="https://rethinkdb.com">RethinkDB team</a> and an amazing community.</h2>
+                </section>
+            </div>
+        </footer>
+        <script type="text/javascript">
+          var _gauges = _gauges || [];
+          (function() {
+            var t   = document.createElement('script');
+            t.type  = 'text/javascript';
+            t.async = true;
+            t.id    = 'gauges-tracker';
+            t.setAttribute('data-site-id', '56fb1a594b2ffa61f100a699');
+            t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+            t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(t, s);
+          })();
+        </script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-9922584-3', 'auto');
+          ga('send', 'pageview');
+
+      </script>
+    </body>
+</html>

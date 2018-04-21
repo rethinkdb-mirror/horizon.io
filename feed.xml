@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Horizon: the realtime, open-source JavaScript backend</title>
+        <description>News and updates from the Horizon team.</description>
+        <link>https://horizon.io</link>
+        <atom:link href="https://horizon.io/feed.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Write about Horizon and you could win a prize!</title>
+            
+            <dc:creator>Christina Keelan</dc:creator>
+            
+            <description>
+                <![CDATA[
+                
+                    <img src="https://horizon.io/images/posts/2016-06-13/banner.png" />
+                
+                ]]>
+                <div><p>Starting today, we’re sponsoring $500 for the best content written about
+Horizon during Pluralsight’s <a href="http://tutorials.pluralsight.com/contest/">hack.guides() 2016 Tutorial
+Contest</a>.</p>
+
+<p>If you’re not familiar with <a href="http://tutorials.pluralsight.com/">hack.guides()</a>,
+it’s a developer community for writing technical guides. It’s a great way to
+collaborate with other writers and help spread your knowledge across a growing
+open-source community!</p>
+
+</div>
+            </description>
+            <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
+            <link>https://horizon.io/blog/hack-guides/</link>
+            <guid isPermaLink="true">https://horizon.io/blog/hack-guides/</guid>
+        </item>
+        
+        <item>
+            <title>RethinkDB partners with DigitalOcean for one-click Horizon app deployment</title>
+            
+            <dc:creator>Ryan Paul</dc:creator>
+            
+            <description>
+                <![CDATA[
+                
+                    <img src="https://horizon.io/images/posts/2016-05-24/horizon-digital-ocean.png" />
+                
+                ]]>
+                <div><p>Last week we <a href="http://rethinkdb.com/blog/horizon-release/">announced</a> the first release of Horizon, an open-source backend for
+realtime web applications. Developers can use the Horizon server and its
+frontend client library to build and scale realtime web applications without
+writing any backend code. Built on top of RethinkDB, Horizon extends the
+database’s built-in support for live updates all the way to the frontend.</p>
+
+<p>To help you get started with Horizon right away, we worked with our friends at
+<a href="http://digitalocean.com/">Digital Ocean</a> to put together a <a href="https://www.digitalocean.com/features/one-click-apps/">One-Click Application</a>.
+You can use it to setup Horizon on Digital Ocean, with all of the dependencies
+that you will need to get your application up and running. It includes
+RethinkDB, Node.js, the Horizon server, and Nginx. You can
+<a href="https://www.digitalocean.com/community/tutorials/how-to-use-the-horizon-one-click-install-image">follow their tutorial</a> to deploy your first Horizon application.</p>
+
+</div>
+            </description>
+            <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
+            <link>https://horizon.io/blog/digital-ocean-oneclick/</link>
+            <guid isPermaLink="true">https://horizon.io/blog/digital-ocean-oneclick/</guid>
+        </item>
+        
+        <item>
+            <title>Introducing Horizon: build realtime apps without writing backend code</title>
+            
+            <dc:creator>Ryan Paul</dc:creator>
+            
+            <description>
+                <![CDATA[
+                
+                    <img src="https://horizon.io/images/posts/2016-05-17/horizon-launch.png" />
+                
+                ]]>
+                <div><p>Today we are pleased to announce the first official release of
+<a href="http://horizon.io">Horizon</a>, an open-source backend that lets developers build and
+scale realtime web applications. Horizon includes:</p>
+
+<ul>
+  <li>A <strong>backend server</strong> built with Node.js and RethinkDB that supports data persistence, realtime streams, input validation, user authentication, and permissions</li>
+  <li>A <strong>JavaScript client library</strong> that developers can use on the frontend to store JSON documents in the database, perform queries, and subscribe to live updates</li>
+  <li>A <strong>command-line tool</strong> that can generate project templates, start up a local Horizon development server, and help you deploy your Horizon application to the cloud</li>
+</ul>
+
+<p>The Horizon server is a complete backend that developers can use to power their
+applications. It’s great for rapid prototyping: simply run the Horizon server
+from the command-line and develop your frontend user experience with the Horizon
+ client library. Frontend developers can use Horizon to create full applications
+ without writing any backend code.</p>
+
+<p>Horizon is open-source software, which means that you can use and modify it as
+you see fit. Run a local instance on your laptop during development and then
+deploy your application anywhere you want: low-cost VPS hosting environments,
+scalable public cloud platforms, or your own bare metal. Horizon takes advantage
+ of RethinkDB’s <a href="https://aphyr.com/posts/329-jepsen-rethinkdb-2-1-5">battle-tested clustering</a>, which makes it easy to scale as
+your audience grows.</p>
+
+</div>
+            </description>
+            <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
+            <link>https://horizon.io/blog/horizon-launch/</link>
+            <guid isPermaLink="true">https://horizon.io/blog/horizon-launch/</guid>
+        </item>
+        
+    </channel>
+</rss>
